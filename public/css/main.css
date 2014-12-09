@@ -3,6 +3,10 @@ body {
   /*font-family: Georgia, "Times New Roman", Times, serif;*/
 }
 
+form {
+  margin-top: 2em;
+}
+
 input, label, textarea {
   display: block;
 }

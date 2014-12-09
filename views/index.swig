@@ -13,6 +13,7 @@
     </article>
     {% endfor %}
     <form id="add-post-form" action="/" method="post" role="form">
+      <h3>Add a new blog post</h3>
       <div class="form-group">
         <label for="title">Title</label>
         <input class="form-control" name="title" id="title" placeholder="Enter title" required>
@@ -21,7 +22,7 @@
         <label for="body">Body</label>
         <textarea class="form-control" id="body" name="body" rows="8" placeholder="Enter body" required></textarea>
       </div>
-      <button class="btn btn-primary" type="submit">post</button>
+      <button class="btn btn-primary" type="submit">add</button>
     </form>
   </div>
 {% endblock %}
