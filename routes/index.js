@@ -22,7 +22,11 @@ function handleResponse(res, successStatus, errorStatus) {
 
 router.get('/', function (req, res) {
   Post.find({}, function (err, posts) {
-    res.render('index', { posts: posts });
+    if (req.accepts('html')) {
+      res.render('index', { posts: posts });
+    } else if (req.accepts('json')) {
+      res.json(posts);
+    }
   });
 });
 
