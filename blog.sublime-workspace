@@ -1,0 +1,1982 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"co",
+				"content"
+			],
+			[
+				"contr",
+				"controller"
+			],
+			[
+				"pr",
+				"proto"
+			],
+			[
+				"ser",
+				"serverLogger"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"norm",
+				"normalizedName"
+			],
+			[
+				"nor",
+				"normalizeName"
+			],
+			[
+				"no",
+				"normalizeName"
+			],
+			[
+				"dir",
+				"dirname"
+			],
+			[
+				"confi",
+				"config"
+			],
+			[
+				"pro",
+				"proto"
+			],
+			[
+				"app",
+				"appname"
+			],
+			[
+				"swi",
+				"swig"
+			],
+			[
+				"sw",
+				"swig"
+			],
+			[
+				"file",
+				"file"
+			],
+			[
+				"erro",
+				"errorObj"
+			],
+			[
+				"err",
+				"errorObj"
+			],
+			[
+				"rou",
+				"router"
+			],
+			[
+				"js",
+				"json"
+			],
+			[
+				"re",
+				"readJSON"
+			],
+			[
+				"proto",
+				"protoype"
+			],
+			[
+				"er",
+				"error"
+			],
+			[
+				"home",
+				"homeConfig"
+			],
+			[
+				"get",
+				"getHomeDir"
+			],
+			[
+				"set",
+				"setMediaType"
+			],
+			[
+				"temp",
+				"templateName"
+			],
+			[
+				"ren",
+				"render"
+			],
+			[
+				"return",
+				"returnValue"
+			],
+			[
+				"render",
+				"rendered"
+			],
+			[
+				"hand",
+				"handler"
+			],
+			[
+				"handl",
+				"handlers  (variable)"
+			],
+			[
+				"handle",
+				"handlers"
+			],
+			[
+				"middle",
+				"middleware"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"midd",
+				"middleware"
+			],
+			[
+				"controll",
+				"controllers"
+			],
+			[
+				"config",
+				"configPath"
+			],
+			[
+				"context",
+				"contextmenu"
+			],
+			[
+				"di",
+				"divisor"
+			],
+			[
+				"displ",
+				"display"
+			],
+			[
+				"int_",
+				"inst_el"
+			],
+			[
+				"images",
+				"images_loaded"
+			],
+			[
+				"ima",
+				"images_deferred"
+			],
+			[
+				"image",
+				"image"
+			],
+			[
+				"img",
+				"img_url"
+			],
+			[
+				"collec",
+				"collection_schema"
+			],
+			[
+				"pla",
+				"playlist_schema"
+			],
+			[
+				"gene",
+				"generic_presentation_schema"
+			],
+			[
+				"date",
+				"last_modified_date"
+			],
+			[
+				"presen",
+				"presentation_"
+			],
+			[
+				"ti",
+				"title"
+			],
+			[
+				"user",
+				"user_agent"
+			],
+			[
+				"user_",
+				"user_agent"
+			],
+			[
+				"add",
+				"addPresentationSession"
+			],
+			[
+				"Presen",
+				"PresentationHelper"
+			],
+			[
+				"prese",
+				"presentation_session_data"
+			],
+			[
+				"presenta",
+				"presentation_id"
+			],
+			[
+				"pres",
+				"presentation_session"
+			],
+			[
+				"PResen",
+				"PresentationSessionHelper"
+			],
+			[
+				"real",
+				"real_ip_address"
+			],
+			[
+				"event",
+				"event_action"
+			],
+			[
+				"Geol",
+				"GeolocationService"
+			],
+			[
+				"Geo",
+				"GeolocationService"
+			],
+			[
+				"expre",
+				"express_server_opts"
+			],
+			[
+				"op",
+				"opts"
+			],
+			[
+				"exp",
+				"express_server_opts"
+			],
+			[
+				"present",
+				"presentation_obj"
+			],
+			[
+				"word",
+				"word_bag"
+			],
+			[
+				"wor",
+				"word_bag"
+			],
+			[
+				"pre",
+				"presentation_obj"
+			],
+			[
+				"publ",
+				"publish_on_complete"
+			],
+			[
+				"per",
+				"permissionSet_permissions"
+			],
+			[
+				"permi",
+				"permissions_obj"
+			],
+			[
+				"perm",
+				"permissions"
+			],
+			[
+				"prse",
+				"presentation_id"
+			],
+			[
+				"elas",
+				"elasticsearch_index_name"
+			],
+			[
+				"sear",
+				"search_index_worker"
+			],
+			[
+				"ta",
+				"task_q"
+			],
+			[
+				"db_",
+				"db_name"
+			],
+			[
+				"head",
+				"headers"
+			],
+			[
+				"cooki",
+				"cookie_val"
+			],
+			[
+				"coo",
+				"cookie_val"
+			],
+			[
+				"lo",
+				"logout"
+			],
+			[
+				"s",
+				"should"
+			],
+			[
+				"isn",
+				"instruments_list"
+			],
+			[
+				"in",
+				"instructions"
+			],
+			[
+				"filter",
+				"filterInstrumentsCollection"
+			],
+			[
+				"instru",
+				"instruments_collection"
+			],
+			[
+				"inst",
+				"instruments_collection"
+			],
+			[
+				"margin-",
+				"margin-top"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"backgrou",
+				"background-repeat"
+			],
+			[
+				"coll",
+				"coll"
+			],
+			[
+				"test",
+				"test_config"
+			],
+			[
+				"GOOD",
+				"GOOD_USER_EMAIL"
+			],
+			[
+				"Obje",
+				"ObjectId"
+			],
+			[
+				"type",
+				"type_str"
+			],
+			[
+				"data",
+				"database_parameters"
+			],
+			[
+				"db",
+				"db_config"
+			],
+			[
+				"NODE_",
+				"NODE_ENV"
+			],
+			[
+				"cont",
+				"continue"
+			],
+			[
+				"collectio",
+				"collection"
+			],
+			[
+				"contai",
+				"container_helper"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"coni",
+				"container_helpers"
+			],
+			[
+				"defa",
+				"default_container_options"
+			],
+			[
+				"Con",
+				"ContainerHelper"
+			],
+			[
+				"margi",
+				"margin-bottom"
+			],
+			[
+				"rela",
+				"relative"
+			],
+			[
+				"backgro",
+				"background"
+			],
+			[
+				"titl",
+				"titleTemplate"
+			],
+			[
+				"instu",
+				"instruments_dlg"
+			],
+			[
+				"containe",
+				"container"
+			],
+			[
+				"sort",
+				"sortPresentations"
+			],
+			[
+				"sort_",
+				"sort_by"
+			],
+			[
+				"open",
+				"openInstrumentsDialog"
+			],
+			[
+				"hi_",
+				"hi_res_bg_url"
+			],
+			[
+				"play",
+				"playlist"
+			],
+			[
+				"playlist",
+				"playlist_collection"
+			],
+			[
+				"exit",
+				"exitWithError"
+			],
+			[
+				"em",
+				"email_address"
+			],
+			[
+				"authenti",
+				"authenticateLegacyUser"
+			],
+			[
+				"sort_f",
+				"sort_field2"
+			],
+			[
+				"so",
+				"sort_by"
+			],
+			[
+				"piece",
+				"piece_layout"
+			],
+			[
+				"hi_re",
+				"hi_res_bg_size"
+			],
+			[
+				"ins",
+				"instructions"
+			],
+			[
+				"instrument",
+				"instruments_dlg"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 320,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".jshint",
+			"settings":
+			{
+				"buffer_size": 367,
+				"line_ending": "Unix",
+				"name": "{"
+			}
+		},
+		{
+			"file": "app.js",
+			"settings":
+			{
+				"buffer_size": 1478,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "blog.sublime-project",
+			"settings":
+			{
+				"buffer_size": 180,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/error.jade",
+			"settings":
+			{
+				"buffer_size": 84,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/index.jade",
+			"settings":
+			{
+				"buffer_size": 66,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/layout.jade",
+			"settings":
+			{
+				"buffer_size": 124,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"lint",
+				"SublimeLinter: Extract Annotations"
+			],
+			[
+				"jshi",
+				"JSHint"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"p",
+				"Package Control: Discover Packages"
+			],
+			[
+				"preferen",
+				"Preferences: Settings - Default"
+			],
+			[
+				"proje",
+				"Project: Add Folder"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"git di",
+				"Git: Diff Current File"
+			],
+			[
+				"git d",
+				"Git: Diff Tool"
+			],
+			[
+				"git sta",
+				"Git: Status"
+			],
+			[
+				"git",
+				"Git: Diff Tool"
+			],
+			[
+				"git l",
+				"Git: Log All"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"dis",
+				"Package Control: Discover Packages"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 347.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/gustavo/github/blog",
+		"/Users/gustavo/github/blog/bin",
+		"/Users/gustavo/github/blog/views"
+	],
+	"file_history":
+	[
+		"/Users/gustavo/github/blog/app.js",
+		"/Users/gustavo/github/node-express/.jshintrc",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/node_modules/grunt-contrib-imagemin/node_modules/imagemin/node_modules/imagemin-gifsicle/node_modules/gifsicle/node_modules/bin-build/node_modules/download/node_modules/request/node_modules/combined-stream/node_modules/delayed-stream/test/integration/test-delayed-http-upload.js",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/node_modules/grunt-contrib-uglify/node_modules/uglify-js/node_modules/optimist/example/boolean_double.js",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/node_modules/grunt-contrib-watch/node_modules/tiny-lr-fork/bin/update-livereload",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/node_modules/multer/node_modules/busboy/test/test-utils-parse-params.js",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/node-express-grunt.sublime-project",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/routes/index.coffee",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/node_modules/grunt-contrib-imagemin/node_modules/imagemin/node_modules/imagemin-svgo/node_modules/svgo/node_modules/coa/src/arg.coffee",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/node_modules/serve-favicon/node_modules/ms/.npmignore",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/node_modules/serve-favicon/HISTORY.md",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/node_modules/serve-favicon/index.js",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/node_modules/grunt/node_modules/grunt-legacy-util/test/fixtures/Gruntfile-execArgv.js",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/node_modules/coffeelint/src/rules/missing_fat_arrows.coffee",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/node_modules/jade/lib/filters.js",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/node_modules/errorhandler/node_modules/accepts/node_modules/negotiator/lib/encoding.js",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/node_modules/load-grunt-tasks/node_modules/multimatch/node_modules/minimatch/test/extglob-ending-with-state-char.js",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/node_modules/grunt-contrib-imagemin/node_modules/imagemin/node_modules/vinyl-fs/node_modules/glob-stream/node_modules/glob2base/.editorconfig",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/node_modules/load-grunt-tasks/node_modules/multimatch/node_modules/array-differ/index.js",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/node_modules/grunt-contrib-less/node_modules/less/test/less/import/import-and-relative-paths-test.less",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/node_modules/grunt-contrib-jshint/node_modules/jshint/bin/land",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/node_modules/grunt-contrib-less/node_modules/maxmin/node_modules/chalk/node_modules/ansi-styles/ansi-styles.js",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/node_modules/grunt-contrib-less/node_modules/chalk/node_modules/.bin/has-ansi",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/node_modules/load-grunt-tasks/node_modules/multimatch/node_modules/minimatch/node_modules/sigmund/sigmund.js",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/node_modules/load-grunt-tasks/node_modules/findup-sync/test/fixtures/a/foo.txt",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/node_modules/grunt-contrib-imagemin/node_modules/imagemin/node_modules/imagemin-gifsicle/node_modules/gifsicle/node_modules/bin-build/node_modules/download/node_modules/decompress-unzip/node_modules/adm-zip/test/assets/attributes_test/blank file.txt",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/node_modules/grunt-contrib-imagemin/node_modules/imagemin/node_modules/stream-combiner/node_modules/through/LICENSE.APACHE2",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/node_modules/body-parser/LICENSE",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/views/index.html",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/views/login.html",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/check.coffee",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/assets/coffeescripts/index.coffee",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/tmp/.gitkeep",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/config.coffee",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/node_modules/coffee-script/CONTRIBUTING.md",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/coffeelint.json",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/npm-debug.log",
+		"/Users/gustavo/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/gustavo/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/gustavo/Library/Application Support/Sublime Text 3/Packages/User/IcedCoffeeScript.sublime-settings",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/views/index.swig",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/views/layout.swig",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/views/login.swig",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/assets/scss/app.scss",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/views/layout.html",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/views/layout.jade",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/views/index.jade",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/views/login.jade",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/logger.coffee",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/log/node-express-grunt.log",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/assets/scss/index.scss",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/.gitignore",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/tmp/stylesheets/app.css",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/assets/less/index.less",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/app.coffee",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/README.md",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/Gruntfile.coffee",
+		"/Users/gustavo/Library/Application Support/Sublime Text 3/Packages/User/JSON.sublime-settings",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/log/.gitkeep",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/public/.gitkeep",
+		"/Users/gustavo/github/node-express-grunt-boilerplate/config.sample.coffee",
+		"/Users/gustavo/github/koa-boilerplate/node_modules/koa/node_modules/cookies/test/http.js",
+		"/Users/gustavo/github/koa-boilerplate/node_modules/mocha/lib/reporters/html.js",
+		"/Users/gustavo/github/koa-boilerplate/node_modules/co-views/History.md",
+		"/Users/gustavo/github/koa-boilerplate/node_modules/koa/node_modules/statuses/index.js",
+		"/Users/gustavo/github/koa-boilerplate/.jshintrc",
+		"/Users/gustavo/github/koa-boilerplate/koa-boilerplate.sublime-project",
+		"/Users/gustavo/github/koa-boilerplate/.gitignore",
+		"/Users/gustavo/github/koa-boilerplate/views/list.html",
+		"/Users/gustavo/github/koa-boilerplate/views/layout.html",
+		"/Users/gustavo/github/koa-boilerplate/views/error.html",
+		"/Users/gustavo/github/koa-boilerplate/public/styles/main.css",
+		"/Users/gustavo/Library/Application Support/Sublime Text 3/Packages/User/JavaScriptNext.sublime-settings",
+		"/Users/gustavo/Library/Application Support/Sublime Text 3/Packages/User/HTML.sublime-settings",
+		"/Users/gustavo/Library/Application Support/Sublime Text 3/Packages/User/CSS.sublime-settings",
+		"/Users/gustavo/github/koa-boilerplate/.editorconfig",
+		"/Users/gustavo/github/koa-boilerplate/controllers/messages.js",
+		"/Users/gustavo/github/koa-boilerplate/helpers/View.js",
+		"/Users/gustavo/github/koa-boilerplate/test/routeSpec.js",
+		"/Users/gustavo/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/Users/gustavo/github/koa-boilerplate/middlewares/index.js",
+		"/Users/gustavo/Library/Application Support/Sublime Text 2/Packages/User/JavaScriptNext.sublime-settings",
+		"/Users/gustavo/Library/Application Support/Sublime Text 2/Packages/User/SublimeLinter.sublime-settings",
+		"/Users/gustavo/Library/Application Support/Sublime Text 2/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/Users/gustavo/github/koa-boilerplate/Application.js",
+		"/Users/gustavo/github/koa-boilerplate/node_modules/koa/lib/request.js",
+		"/Users/gustavo/github/koa-boilerplate/test.js",
+		"/Users/gustavo/github/koa-boilerplate/app.js",
+		"/Users/gustavo/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/gustavo/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/gustavo/Library/Application Support/Sublime Text 2/Packages/User/JSON.sublime-settings",
+		"/Users/gustavo/Library/Application Support/Sublime Text 2/Packages/User/Package Control.sublime-settings",
+		"/Users/gustavo/Library/Application Support/Sublime Text 2/Packages/Package Control/Package Control.sublime-settings",
+		"/Users/gustavo/Library/Application Support/Sublime Text 2/Packages/Git/Git.sublime-settings",
+		"/Users/gustavo/Library/Application Support/Sublime Text 2/Packages/User/Git.sublime-settings",
+		"/Users/gustavo/github/koa-boilerplate/middleware/index.js",
+		"/Users/gustavo/sublime-project/just-the-feed.sublime-project",
+		"/Users/gustavo/github/koa-boilerplate/koa-boilerplate.sublime-workspace",
+		"/Users/gustavo/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/gustavo/github/koa-boilerplate/controllers/koa-boilerplate.sublime-project",
+		"/Users/gustavo/github/Maestro/servers/maestro/object/presentation_session_odm.coffee",
+		"/Users/gustavo/github/Maestro/servers/admin/controllers/presentation_controller.coffee",
+		"/Users/gustavo/github/Maestro/servers/maestro/scripts/update_thumbnail_urls.js",
+		"/Users/gustavo/github/Maestro/servers/maestro/content_management/content_worker.coffee",
+		"/Users/gustavo/github/Maestro/servers/maestro/config/feature_config.coffee",
+		"/Users/gustavo/github/Maestro/servers/maestro/controller/presentation_controller.coffee",
+		"/Users/gustavo/github/Maestro/servers/maestro/client/coffee/presentation/presentation.coffee",
+		"/Users/gustavo/github/Maestro/servers/admin/controllers/instrument_controller.coffee",
+		"/Users/gustavo/github/Maestro/servers/maestro/client/coffee/common/instruments.coffee",
+		"/Users/gustavo/github/Maestro/servers/maestro/controller/container_controller.coffee",
+		"/Users/gustavo/github/Maestro/servers/maestro/controller/container_helper.coffee",
+		"/Users/gustavo/github/Maestro/servers/maestro/object/presentation_odm.coffee",
+		"/Users/gustavo/github/Maestro/servers/admin/client/app/scripts/controllers/create.coffee",
+		"/Users/gustavo/github/Maestro/servers/admin/client/app/scripts/app.coffee",
+		"/Users/gustavo/github/Maestro/servers/admin/client/app/scripts/controllers/edit.coffee",
+		"/Users/gustavo/github/Maestro/servers/admin/client/app/scripts/directives/query_builder.coffee",
+		"/Users/gustavo/github/Maestro/servers/admin/client/app/views/query_builder.html",
+		"/Users/gustavo/github/Maestro/servers/admin/client/app/views/presentation/selector.html",
+		"/Users/gustavo/github/Maestro/servers/admin/controllers/admin_controller.coffee",
+		"/Users/gustavo/github/Maestro/servers/admin/client/app/scripts/controllers/upload_tunes.coffee",
+		"/Users/gustavo/github/Maestro/servers/admin/router.coffee",
+		"/Users/gustavo/github/Maestro/servers/admin/client/app/scripts/services/CtrHelper.coffee",
+		"/Users/gustavo/github/Maestro/servers/admin/controllers/totd_controller.coffee",
+		"/Users/gustavo/github/Maestro/servers/maestro/client/styles/_instruments_dialog.scss",
+		"/Users/gustavo/github/Maestro/servers/maestro/templates/partials/instrument_templates.ejs",
+		"/Users/gustavo/github/Maestro/servers/maestro/client/coffee/piece/piece.coffee",
+		"/Users/gustavo/github/Maestro/servers/admin/controllers/container_controller.coffee",
+		"/Users/gustavo/github/Maestro/servers/maestro/object/user_odm.coffee"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/gustavo/github/node-express-grunt-boilerplate,*.coffee",
+			"/Users/gustavo/github/node-express-grunt-boilerplate",
+			"/Users/gustavo/github/node-express-grunt-boilerplate,*.coffee",
+			"/Users/gustavo/github/node-express-grunt-boilerplate/*.coffee",
+			"/Users/gustavo/github/node-express-grunt-boilerplate",
+			"/Users/gustavo/github/node-express-grunt-boilerplate,*.coffee",
+			"/Users/gustavo/github/koa-boilerplate,*.coffee",
+			"/Users/gustavo/github/koa-boilerplate",
+			"/Users/gustavo/github/Maestro/servers,*.coffee",
+			"/Users/gustavo/github/Maestro/servers,*.scss",
+			"/Users/gustavo/github/Maestro/servers,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/admin,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro/servers/admin,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro/admin,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro/*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro/scripts,*.js",
+			"/Users/gustavo/github/Maestro/servers/maestro/scripts,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.scss",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro/test,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.ejs",
+			"/Users/gustavo/github/Maestro/servers/maestro",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.ejs",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.scss",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.ejs",
+			"/Users/gustavo/github/Maestro/servers/maestro",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.sh",
+			"/Users/gustavo/github/Maestro/servers/maestro",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.ejs",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.scss",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro/controller,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro/test,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.ejs",
+			"/Users/gustavo/github/Maestro/servers/maestro",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.ejs",
+			"/Users/gustavo/github/Maestro/servers/maestro/client,*.ejs",
+			"/Users/gustavo/github/Maestro/servers/maestro/client,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.ejs",
+			"/Users/gustavo/github/Maestro/servers/maestro",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.scss",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro",
+			"/Users/gustavo/github/Maestro/servers/admin,*.scss",
+			"/Users/gustavo/github/Maestro/servers/admin,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.ejs",
+			"/Users/gustavo/github/Maestro/servers/",
+			"/Users/gustavo/github/Maestro/servers/scripts",
+			"/Users/gustavo/github/Maestro/servers/admin,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.ejs",
+			"/Users/gustavo/github/Maestro/servers/maestro",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.ejs",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.scss",
+			"/Users/gustavo/github/Maestro/servers/maestro",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.scss",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.ejs",
+			"/Users/gustavo/github/Maestro/servers/maestro",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.scss",
+			"/Users/gustavo/github/Maestro/servers/maestro",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro/client,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.scss",
+			"/Users/gustavo/github/Maestro/servers/maestro,*scss",
+			"/Users/gustavo/github/Maestro/servers/maestro",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.ejs",
+			"/Users/gustavo/github/Maestro/servers/maestro",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.scss",
+			"/Users/gustavo/github/Maestro/servers/maestro/client,*.coffee",
+			"/Users/gustavo/github/Maestro/servers,*.scss",
+			"/Users/gustavo/github/Maestro/servers",
+			"/Users/gustavo/github/Maestro/servers,*.scss",
+			"/Users/gustavo/github/Maestro/servers",
+			"/Users/gustavo/github/Maestro/servers,*.coffee",
+			"/Users/gustavo/github/Maestro/servers,*.scss",
+			"/Users/gustavo/github/Maestro/servers,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/admin,*.coffee",
+			"/Users/gustavo/github/Maestro/servers,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/maestro,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/admin,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/admin,*.scss",
+			"/Users/gustavo/github/Maestro/servers/admin,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/admin,*\".coffee",
+			"/Users/gustavo/github/Maestro/servers,*.scss",
+			"/Users/gustavo/github/Maestro/servers",
+			"/Users/gustavo/github/Maestro/servers,*.coffee",
+			"/Users/gustavo/github/Maestro/servers",
+			"/Users/gustavo/github/Maestro/servers,*.coffee",
+			"/Users/gustavo/github/Maestro/servers/admin",
+			"/Users/gustavo/github/Maestro/servers,*.coffee",
+			"/Users/gustavo/github/Maestro/servers,*.scss",
+			"/Users/gustavo/github/Maestro/servers/admin",
+			"/Users/gustavo/github/Virtuoso/maestro/servers/admin",
+			"/Users/gustavo/github/Virtuoso/maestro/servers/admin,*.coffee",
+			"/Users/gustavo/github/Virtuoso/maestro/servers,*.scss",
+			"/Users/gustavo/github/Virtuoso/maestro/servers,*.coffee",
+			"/Users/gustavo/github/Virtuoso/maestro/servers",
+			"/Users/gustavo/github/Virtuoso/maestro/servers,*.js",
+			"/Users/gustavo/github/Virtuoso/maestro/servers,*.coffee",
+			"/Users/gustavo/github/Virtuoso/maestro/servers",
+			"/Users/gustavo/github/Virtuoso/maestro/servers/admin",
+			"/Users/gustavo/github/Virtuoso/maestro/servers",
+			"/Users/gustavo/github/Virtuoso/maestro/servers,*.coffee",
+			"/Users/gustavo/github/Virtuoso/maestro/servers/admin,*.coffee",
+			"/Users/gustavo/github/Virtuoso/maestro/servers,*.coffee"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"proto",
+			"Cmd",
+			"stream",
+			"morgan",
+			"exports",
+			"obj",
+			"config.",
+			"layout.swig",
+			"staticDir",
+			".name",
+			"appdir",
+			".name",
+			"dirname",
+			"appdir",
+			"appname",
+			"check",
+			"urlencoded",
+			"vendor",
+			"mainRouter",
+			"html",
+			"login",
+			"jade",
+			".config",
+			"livere",
+			"watch",
+			"less",
+			"pm2",
+			"coffeescripts",
+			"# inject",
+			"logger",
+			"left",
+			"injector",
+			"debug",
+			"indentation",
+			"tab",
+			"load-grunt-tasks",
+			"config",
+			"error",
+			"http",
+			"console.",
+			"http",
+			"proto",
+			"config",
+			"templateName",
+			"jsli",
+			"javascript_linter",
+			"sublimelinter",
+			"jslint",
+			"user",
+			"sublimelinter",
+			"path",
+			"git",
+			"yield",
+			"parse",
+			"ctx.",
+			"this.app",
+			"url",
+			"this.app",
+			"App.prototype",
+			"var",
+			"defaultOptions",
+			"sensi",
+			"helpers/view",
+			"//",
+			"/unsu",
+			"protocol",
+			"//",
+			"protocol",
+			"protoco",
+			"//",
+			"feature_manager",
+			"thumbnail_url",
+			"thumbnail_rul",
+			"sortPresentations",
+			"sort_by",
+			"priori",
+			"handleContextMenu",
+			"myCarouselTwoPage",
+			"init",
+			".on",
+			"mycarousel",
+			"images_def",
+			"image-width",
+			"img",
+			".cello",
+			"is_disab",
+			"instruments",
+			"disabled",
+			".pre",
+			"addContainer",
+			"date",
+			"promises",
+			"uploadAndAddPresentations",
+			"/presentations",
+			"disabl",
+			"prevent",
+			"error",
+			"render",
+			"playlists: request.playlists",
+			"handle_async_errors",
+			"tostring",
+			"AIzaSyClvGMilVfR9Cn_n8q_PboxeM0soyN15as",
+			"browser_key",
+			"getYouTubeVideoMetadata",
+			"browser_key",
+			"browser_api_key",
+			"metadataCallback",
+			"youtube_api",
+			"AIzaSyBM5SODVBkP2BleEvw1SSIR-zCndA9exog",
+			"VnZXRI28pRZdS1XXGYQXO95X",
+			"view_defaults",
+			"description",
+			"DeviceHandler",
+			"is_legacy",
+			"legacy",
+			"passw",
+			"PresentationSessionHelper",
+			"request",
+			"isValidUserAgent",
+			"user_agent_whitelist",
+			"user_agent_whitelist\nuser_agent_whitelist",
+			"reroute",
+			"showPresentation",
+			"device_name",
+			".onload",
+			"showPresentation",
+			"page_marker",
+			"showPresentation"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"template",
+			"let",
+			"presentation_obj",
+			"presentation",
+			"@logger",
+			"pres2",
+			"pres1",
+			"PID_DIR",
+			"PID_FILE",
+			"InstrumentHelper.setInstrument",
+			"obj",
+			"populateUserInstrument",
+			"www.chromatik.com",
+			"chromatik.com",
+			"$hi_res_bg_url",
+			"$hi_res_bg_size",
+			"",
+			"%>",
+			"<%",
+			"target_user.",
+			"%>",
+			"<%",
+			"js_compressor_options",
+			"css_compressor_options",
+			"request.user._id",
+			"analytics_actions",
+			"analytics_constants.actions.",
+			"ANALYTICS_REGISTRATION",
+			"url(/images/jquery-ui/",
+			"a",
+			"</a>",
+			"<a class=\"article\">",
+			"base_url",
+			"build_version",
+			"deploy_dir",
+			"rgba(250,250,250,0.6)",
+			"rgba(254,254,254,0.6)",
+			"@get '",
+			"@get",
+			"@",
+			"_id",
+			"loader",
+			"btn",
+			".more",
+			"user",
+			"id ?= 'me'",
+			"id ||= 'me'",
+			"facebook_controller",
+			"@base_url",
+			"${ICED}",
+			"model",
+			"chromatik.com",
+			"localhost:8888",
+			"",
+			"email_recordings",
+			"email_recording",
+			"dimensions",
+			"analytics: analyticsSettings",
+			"${COFFEE}"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 320,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								314,
+								314
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": ".jshint",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 367,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								196,
+								196
+							]
+						],
+						"settings":
+						{
+							"auto_name": "{",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1478,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								768,
+								768
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "blog.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 180,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								67,
+								67
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "views/error.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 84,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "views/index.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 66,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "views/layout.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 124,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 293.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 94.0
+	},
+	"project": "blog.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"config",
+				"~/github/node-express-grunt-boilerplate/config.coffee"
+			],
+			[
+				"presentation_sessio",
+				"servers/maestro/object/presentation_session_odm.coffee"
+			],
+			[
+				"content",
+				"servers/maestro/content_management/content_worker.coffee"
+			],
+			[
+				"feature_con",
+				"servers/maestro/config/feature_config.coffee"
+			],
+			[
+				"content_worker",
+				"servers/maestro/content_management/content_worker.coffee"
+			],
+			[
+				"presentation_odm",
+				"servers/maestro/object/presentation_odm.coffee"
+			],
+			[
+				"container_h",
+				"servers/maestro/controller/container_helper.coffee"
+			],
+			[
+				"container_contro",
+				"servers/maestro/controller/container_controller.coffee"
+			],
+			[
+				"container",
+				"servers/admin/controllers/container_controller.coffee"
+			],
+			[
+				"instrument_controller",
+				"servers/admin/controllers/instrument_controller.coffee"
+			],
+			[
+				"instrument_template",
+				"servers/maestro/templates/partials/instrument_templates.ejs"
+			],
+			[
+				"presen",
+				"servers/maestro/controller/presentation_controller.coffee"
+			],
+			[
+				"instruments.coff",
+				"servers/maestro/client/coffee/common/instruments.coffee"
+			],
+			[
+				"",
+				"servers/maestro/object/presentation_odm.coffee"
+			],
+			[
+				"container_helper.",
+				"servers/maestro/controller/container_helper.coffee"
+			],
+			[
+				"presentation_contro",
+				"servers/admin/controllers/presentation_controller.coffee"
+			],
+			[
+				"intrument_heper",
+				"servers/maestro/controller/instrument_helper.coffee"
+			],
+			[
+				"instruments.",
+				"servers/maestro/client/coffee/common/instruments.coffee"
+			],
+			[
+				"instru",
+				"servers/maestro/controller/instrument_controller.coffee"
+			],
+			[
+				"maestro_view",
+				"servers/maestro/view/maestro_view.coffee"
+			],
+			[
+				"feature",
+				"servers/maestro/config/feature_config.coffee"
+			],
+			[
+				"feature_cnfo",
+				"servers/maestro/config/feature_config.coffee"
+			],
+			[
+				"presentation_controlle",
+				"servers/maestro/controller/presentation_controller.coffee"
+			],
+			[
+				"maestro",
+				"servers/maestro/view/maestro_view.coffee"
+			],
+			[
+				"contai",
+				"servers/maestro/controller/container_controller.coffee"
+			],
+			[
+				"container_controll",
+				"servers/admin/controllers/container_controller.coffee"
+			],
+			[
+				"main",
+				"servers/maestro/templates/main_layout.ejs"
+			],
+			[
+				"user_odm",
+				"servers/maestro/object/user_odm.coffee"
+			],
+			[
+				"user_con",
+				"servers/maestro/controller/user_controller.coffee"
+			],
+			[
+				"presentation_help",
+				"servers/maestro/controller/presentation_helper.coffee"
+			],
+			[
+				"notification_worker",
+				"servers/maestro/notifications/notification_worker.coffee"
+			],
+			[
+				"device_handler",
+				"servers/maestro/common/device_handler.coffee"
+			],
+			[
+				"presentation_con",
+				"servers/maestro/controller/presentation_controller.coffee"
+			],
+			[
+				"container_helper",
+				"servers/maestro/controller/container_helper.coffee"
+			],
+			[
+				"presentation_controller",
+				"servers/maestro/controller/presentation_controller.coffee"
+			],
+			[
+				"user_help",
+				"servers/maestro/controller/user_helper.coffee"
+			],
+			[
+				"presentation_se",
+				"servers/maestro/controller/presentation_session_controller.coffee"
+			],
+			[
+				"user_",
+				"servers/maestro/object/user_odm.coffee"
+			],
+			[
+				"base_controll",
+				"servers/maestro/controller/base_controller.coffee"
+			],
+			[
+				"user_helper",
+				"servers/maestro/controller/user_helper.coffee"
+			],
+			[
+				"geol",
+				"servers/maestro/common/geolocation_service.coffee"
+			],
+			[
+				"feature_conf",
+				"servers/maestro/config/feature_config.coffee"
+			],
+			[
+				"user_contro",
+				"servers/maestro/controller/user_controller.coffee"
+			],
+			[
+				"analytics",
+				"servers/maestro/common/analytics.coffee"
+			],
+			[
+				"analytics.",
+				"servers/maestro/client/coffee/analytics.coffee"
+			],
+			[
+				"login.coff",
+				"servers/maestro/client/coffee/common/login.coffee"
+			],
+			[
+				"feat",
+				"servers/maestro/config/feature_config.coffee"
+			],
+			[
+				"lan",
+				"servers/maestro/client/coffee/landing/landing.coffee"
+			],
+			[
+				"geolo",
+				"servers/maestro/test/service/geolocation_service.coffee"
+			],
+			[
+				"user_controller",
+				"servers/maestro/controller/user_controller.coffee"
+			],
+			[
+				"instrument",
+				"servers/admin/controllers/instrument_controller.coffee"
+			],
+			[
+				"url_map",
+				"servers/maestro/object/url_map_odm.coffee"
+			],
+			[
+				"feature_co",
+				"servers/maestro/config/feature_config.coffee"
+			],
+			[
+				"elastic",
+				"servers/maestro/search/elastic_utils.coffee"
+			],
+			[
+				"presentation_controll",
+				"servers/maestro/controller/presentation_controller.coffee"
+			],
+			[
+				"work",
+				"servers/maestro/common/worker.coffee"
+			],
+			[
+				"feature_config",
+				"servers/maestro/config/feature_config.coffee"
+			],
+			[
+				"feature_mana",
+				"servers/maestro/common/feature_manager.coffee"
+			],
+			[
+				"scheduler",
+				"servers/maestro/common/scheduler_worker.coffee"
+			],
+			[
+				"worker.c",
+				"servers/maestro/common/worker.coffee"
+			],
+			[
+				"config.coffee",
+				"servers/maestro/config/config.coffee"
+			],
+			[
+				"ul_map",
+				"servers/maestro/object/url_map_odm.coffee"
+			],
+			[
+				"url_ma",
+				"servers/maestro/object/url_map_odm.coffee"
+			],
+			[
+				"upload_tunes",
+				"servers/admin/client/app/scripts/controllers/upload_tunes.coffee"
+			],
+			[
+				"presentation_helper",
+				"servers/maestro/controller/presentation_helper.coffee"
+			],
+			[
+				"presentation_odm.coffee",
+				"servers/maestro/object/presentation_odm.coffee"
+			],
+			[
+				"_footer",
+				"servers/maestro/client/styles/_footer.scss"
+			],
+			[
+				"landing.scss",
+				"servers/maestro/client/styles/landing.scss"
+			],
+			[
+				"feature_confi",
+				"servers/maestro/config/feature_config.coffee"
+			],
+			[
+				"search",
+				"servers/maestro/search/search_client.coffee"
+			],
+			[
+				"footer.e",
+				"servers/maestro/templates/partials/footer.ejs"
+			],
+			[
+				"search_",
+				"servers/maestro/search/search_index_worker.coffee"
+			],
+			[
+				"sitemap_contro",
+				"servers/maestro/controller/sitemap_controller.coffee"
+			],
+			[
+				"main_layou",
+				"servers/maestro/templates/main_layout.ejs"
+			],
+			[
+				"content_work",
+				"servers/maestro/content_management/content_worker.coffee"
+			],
+			[
+				"recording_hel",
+				"servers/maestro/controller/recording_helper.coffee"
+			],
+			[
+				"recording",
+				"servers/maestro/controller/recording_controller.coffee"
+			],
+			[
+				"rating",
+				"servers/maestro/object/rating_odm.coffee"
+			],
+			[
+				"_static.sc",
+				"servers/maestro/client/styles/_static.scss"
+			],
+			[
+				"care",
+				"servers/maestro/templates/partials/careers_content.ejs"
+			],
+			[
+				"footer",
+				"servers/maestro/templates/partials/footer.ejs"
+			],
+			[
+				"main_",
+				"servers/maestro/templates/main_layout.ejs"
+			],
+			[
+				"totd_vi",
+				"servers/maestro/templates/totd_view.ejs"
+			],
+			[
+				"static_a",
+				"servers/maestro/controller/static_page_controller.coffee"
+			],
+			[
+				"db_loader",
+				"servers/maestro/test/util/db_loader.coffee"
+			],
+			[
+				"container_helper.coffee",
+				"servers/maestro/controller/container_helper.coffee"
+			],
+			[
+				"instrument_h",
+				"servers/maestro/controller/instrument_helper.coffee"
+			],
+			[
+				"feature_",
+				"servers/maestro/config/feature_config.coffee"
+			],
+			[
+				"dialog.",
+				"servers/maestro/client/coffee/common/dialog.coffee"
+			],
+			[
+				"gruntfil",
+				"Gruntfile.coffee"
+			],
+			[
+				"dialo",
+				"servers/maestro/client/coffee/common/dialog.coffee"
+			],
+			[
+				"dialog.coff",
+				"servers/maestro/client/coffee/common/dialog.coffee"
+			],
+			[
+				"featue",
+				"servers/maestro/common/feature_manager.coffee"
+			],
+			[
+				"landing.",
+				"servers/maestro/client/coffee/landing/landing.coffee"
+			],
+			[
+				"shorten",
+				"servers/maestro/controller/shortener_controller.coffee"
+			],
+			[
+				"su",
+				"servers/maestro/templates/shorten_url_view.ejs"
+			],
+			[
+				"_footer.s",
+				"servers/maestro/client/styles/_footer.scss"
+			],
+			[
+				"static_",
+				"servers/maestro/controller/static_page_controller.coffee"
+			],
+			[
+				"landing.coff",
+				"servers/maestro/client/coffee/landing/landing.coffee"
+			],
+			[
+				"asset_group",
+				"servers/maestro/config/asset_groups.coffee"
+			],
+			[
+				"presenta",
+				"servers/maestro/object/presentation_odm.coffee"
+			],
+			[
+				"main_layout",
+				"servers/maestro/templates/main_layout.ejs"
+			],
+			[
+				"start",
+				"servers/maestro/start.sh"
+			],
+			[
+				"config.",
+				"servers/maestro/config/config.coffee"
+			],
+			[
+				"bootstrap_carousel",
+				"servers/maestro/templates/partials/bootstrap_carousel.ejs"
+			],
+			[
+				"asset_grop",
+				"servers/maestro/config/asset_groups.coffee"
+			],
+			[
+				"layout_mana",
+				"servers/maestro/client/coffee/presentation/layout_manager.coffee"
+			],
+			[
+				"presentation_control",
+				"servers/maestro/controller/presentation_controller.coffee"
+			],
+			[
+				"head.ejs",
+				"servers/maestro/templates/partials/head.ejs"
+			],
+			[
+				"header.ej",
+				"servers/maestro/templates/partials/header.ejs"
+			],
+			[
+				"start.sh",
+				"servers/maestro/start.sh"
+			],
+			[
+				"dev",
+				"servers/maestro/common/device_handler.coffee"
+			],
+			[
+				"container_",
+				"servers/maestro/controller/container_controller.coffee"
+			],
+			[
+				"static_cont",
+				"servers/maestro/common/static_content_manager.coffee"
+			],
+			[
+				"maestro_uti",
+				"servers/maestro/common/maestro_utils.coffee"
+			],
+			[
+				"sitemap",
+				"servers/maestro/controller/sitemap_controller.coffee"
+			],
+			[
+				"user_controll",
+				"servers/maestro/controller/user_controller.coffee"
+			],
+			[
+				"presentation_co",
+				"servers/maestro/controller/presentation_controller.coffee"
+			],
+			[
+				"user_cotr",
+				"servers/maestro/test/controller/user_controller.coffee"
+			],
+			[
+				"gruntfi",
+				"Gruntfile.coffee"
+			],
+			[
+				"user_factory",
+				"servers/maestro/test/factory/user_factory.coffee"
+			],
+			[
+				"server_con",
+				"servers/maestro/common/server_constants.coffee"
+			],
+			[
+				"sitema",
+				"servers/maestro/controller/sitemap_controller.coffee"
+			],
+			[
+				"server_manager",
+				"servers/maestro/server/server_manager.coffee"
+			],
+			[
+				"start.co",
+				"servers/maestro/start.coffee"
+			],
+			[
+				"presentatin",
+				"servers/maestro/object/presentation_odm.coffee"
+			],
+			[
+				"maestro_utils",
+				"servers/maestro/common/maestro_utils.coffee"
+			],
+			[
+				"permission_se",
+				"servers/maestro/common/permission_set_manager.coffee"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 323.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

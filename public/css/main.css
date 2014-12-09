@@ -1,0 +1,8 @@
+body {
+  color: #555;
+  /*font-family: Georgia, "Times New Roman", Times, serif;*/
+}
+
+input, label, textarea {
+  display: block;
+}
