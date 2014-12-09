@@ -3,8 +3,36 @@ body {
   /*font-family: Georgia, "Times New Roman", Times, serif;*/
 }
 
+.post {
+  position: relative;
+}
+
+.action {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  top: 12px;
+  transition: opacity 0.4s linear;
+}
+
+.post:hover .action {
+  opacity: 0.5;
+}
+
+.post:hover .action:hover {
+  opacity: 1;
+}
+
+.edit {
+  right: 0;
+}
+
+.delete {
+  right: 5%;
+}
+
 form {
-  margin-top: 2em;
+  margin-top: 3em;
 }
 
 input, label, textarea {
