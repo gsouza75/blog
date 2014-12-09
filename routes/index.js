@@ -11,7 +11,9 @@ function handleResponse(res, successStatus, errorStatus) {
       json = { message: err.message, status: errorStatus || 400 };
     } else {
       status = successStatus || 200;
-      json = result.toJSON();
+      json = result.length ? 
+        result.map(function (post) { return post.toJSON(); }) : 
+        result.toJSON();
     }
 
     res
@@ -22,25 +24,26 @@ function handleResponse(res, successStatus, errorStatus) {
 
 router.get('/', function (req, res) {
   Post.find({}, function (err, posts) {
-    if (req.accepts('html')) {
-      res.render('index', { posts: posts });
-    } else if (req.accepts('json')) {
-      res.json(posts);
-    }
+    posts = [];
+    res.render('index', { posts: posts });
   });
 });
 
-router.post('/', function (req, res) {
+router.get('/posts', function (req, res) {
+  Post.find({}, handleResponse(res));
+});
+
+router.post('/posts', function (req, res) {
   var post = new Post(req.body);
   post.set({ author: 'Gustavo Souza' });
   post.save(handleResponse(res, 201));
 });
 
-router.put('/:id', function (req, res) {
+router.put('posts/:id', function (req, res) {
   Post.findByIdAndUpdate(req.params.id, req.body, handleResponse(res));
 });
 
-router.delete('/:id', function (req, res) {
+router.delete('posts/:id', function (req, res) {
   Post.findByIdAndRemove(req.params.id, handleResponse(res));
 });
 

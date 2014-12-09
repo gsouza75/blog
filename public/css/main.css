@@ -3,6 +3,10 @@ body {
   /*font-family: Georgia, "Times New Roman", Times, serif;*/
 }
 
+#posts {
+  display: none;
+}
+
 .post {
   position: relative;
 }
@@ -31,8 +35,12 @@ body {
   right: 5%;
 }
 
-form {
+#add-post-form {
   margin-top: 3em;
+}
+
+#add-post-form .btn {
+  width: 14em;
 }
 
 input, label, textarea {

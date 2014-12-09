@@ -2,18 +2,20 @@
 
 {% block content %}
   <div id="content" role="main" class="container">
-    {% for post in posts %}
-    <article class="post" data-id="{{ post._id }}">
-      <h2 class="title">{{ post.title }}</h2>
-      <div class="metadata">
-        <time pubdate>{{ post.date.toISOString() }}</time>
-        <address class="author">by <a rel="author" href="#">{{ post.author }}</a></address>
-      </div>
-      <p class="body">{{ post.body }}</p>
-      <span class="action edit glyphicon glyphicon-pencil"></span>
-      <span class="action delete glyphicon glyphicon-trash"></span>
-    </article>
-    {% endfor %}
+    <div id="posts">
+      {% for post in posts %}
+      <article class="post" data-id="{{ post._id.toString() }}">
+        <h2 class="title">{{ post.title }}</h2>
+        <div class="metadata">
+          <time pubdate>{{ post.date.toISOString() }}</time>
+          <address class="author">by <a rel="author" href="#">{{ post.author }}</a></address>
+        </div>
+        <p class="body">{{ post.body }}</p>
+        <span class="action delete glyphicon glyphicon-trash" title="Delete"></span>
+        <span class="action edit glyphicon glyphicon-pencil" title="Edit"></span>
+      </article>
+      {% endfor %}
+    </div>
     <form id="add-post-form" action="/" method="post" role="form">
       <h3>Add a new blog post</h3>
       <div class="form-group">
