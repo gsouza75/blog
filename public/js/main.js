@@ -18,7 +18,7 @@
     url: '/posts',
 
     comparator: function (post) {
-      return - post.get('date');
+      return - Date.parse(post.get('date'));
     }
   });
 
@@ -89,14 +89,22 @@
     },
 
     handleFormSubmit: function (e) {
+      function done() {
+        $form[0].reset();
+        $btn.removeAttr('disabled');
+      }
+
       e.preventDefault();
 
       var $form = $(e.currentTarget);
+      var $btn = $form.find('.btn');
+
+      $btn.attr('disabled', 'disabled');
 
       this.collection.create({
         title: $form.find('#title').val(),
         body: $form.find('#body').val()
-      }, { wait: true });
+      }, { wait: true, success: done, error: done });
     }
   });
 
