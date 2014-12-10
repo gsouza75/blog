@@ -60,20 +60,21 @@
   });
 
   var Blog = Backbone.View.extend({
-    el: $('#posts'),
+    el: $('#content'),
+
+    events: {
+      'submit #add-post-form': 'handleFormSubmit'
+    },
 
     initialize: function() {
-      // this.listenTo(this.collection, 'add', this.render);
-      this.listenTo(this.collection, 'reset', this.render);
+      this.posts = this.$('#posts');
       this.listenTo(this.collection, 'sync', this.render);
-      // this.listenTo(this.collection, 'all', this.render);
-
       this.collection.fetch();
     },
 
     addPost: function (post) {
       var view = new PostView({ model: post });
-      this.$el.append(view.render().el);
+      this.posts.append(view.render().el);
     },
 
     addAll: function () {
@@ -81,8 +82,21 @@
     },
 
     render: function () {
+      this.posts.empty();
       this.addAll();
-      this.$el.hide().fadeIn();
+      this.posts.hide().fadeIn();
+      return this;
+    },
+
+    handleFormSubmit: function (e) {
+      e.preventDefault();
+
+      var $form = $(e.currentTarget);
+
+      this.collection.create({
+        title: $form.find('#title').val(),
+        body: $form.find('#body').val()
+      }, { wait: true });
     }
   });
 

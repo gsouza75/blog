@@ -3,6 +3,13 @@ body {
   /*font-family: Georgia, "Times New Roman", Times, serif;*/
 }
 
+.title {
+  max-width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 #posts {
   display: none;
 }

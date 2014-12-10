@@ -16,7 +16,7 @@
       </article>
       {% endfor %}
     </div>
-    <form id="add-post-form" action="/" method="post" role="form">
+    <form id="add-post-form" action="/posts" method="post" role="form">
       <h3>Add a new blog post</h3>
       <div class="form-group">
         <label for="title">Title</label>
