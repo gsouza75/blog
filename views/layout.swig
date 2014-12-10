@@ -14,7 +14,7 @@
 </head>
 <body>
   <header id="header">
-    <h1 id="blog-name" class="container">My Blog</h1>
+    <h1 id="blog-name" class="container">Good Stuff</h1>
   </header>
 
   {% block content %}Default content{% endblock %}
