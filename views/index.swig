@@ -48,12 +48,12 @@
   <script type="text/template" id="form-template">
     <div class="form-group">
       <label for="title">Title</label>
-      <input class="form-control" name="title" id="title" placeholder="Enter title" value="<%= title %>" required
+      <input class="form-control" name="title" id="title" placeholder="Enter title text..." value="<%= title %>" required
         data-bv-notempty-message="The title is required and cannot be empty">
     </div>
     <div class="form-group">
       <label for="body">Body</label>
-      <textarea class="form-control" id="body" name="body" rows="8" placeholder="Enter body" required
+      <textarea class="form-control" id="body" name="body" rows="8" placeholder="Enter body text..." required
         data-bv-notempty-message="The body is required and cannot be empty"><%= body %></textarea>
     </div>
   </script>

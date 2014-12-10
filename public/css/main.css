@@ -22,6 +22,7 @@ body {
 }
 
 .post {
+  margin-bottom: 20px;
   position: relative;
 }
 
@@ -30,7 +31,8 @@ body {
   opacity: 0;
   position: absolute;
   top: 12px;
-  transition: opacity 0.4s linear;
+  -webkit-transition: opacity 0.2s linear;
+          transition: opacity 0.2s linear;
 }
 
 .post:hover .action {
@@ -42,21 +44,29 @@ body {
 }
 
 .edit {
-  right: 0;
+  right: 44px;
 }
 
 .delete {
-  right: 5%;
-}
-
-#add-post-form {
-  margin-top: 3em;
-}
-
-#add-post-form .btn {
-  width: 14em;
+  right: 0;
 }
 
 input, label, textarea {
   display: block;
+}
+
+::-webkit-input-placeholder {
+   font-style: italic;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   font-style: italic;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   font-style: italic;
+}
+
+:-ms-input-placeholder {  
+   font-style: italic;
 }
