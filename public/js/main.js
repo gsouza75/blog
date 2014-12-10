@@ -12,7 +12,7 @@
     idAttribute: '_id'
   });
 
-  var ModalModel = Backbone.Model.extend({
+  var ModalDlgModel = Backbone.Model.extend({
     defaults: {
       cancelText: 'Cancel',
       okText: 'OK'
@@ -25,7 +25,7 @@
     url: '/posts',
 
     comparator: function (post) {
-      return - Date.parse(post.get('date'));
+      return -Date.parse(post.get('date'));
     }
   });
 
@@ -56,16 +56,15 @@
       return this;
     },
 
+    remove: function () {},
+
     handleEdit: function () {
       console.log('edit clicked');
     },
 
     handleDelete: function () {
-      var model = new ModalModel({ title: 'Confirm Delete' });
-
-      var view = new ModalView({
-        model: model, 
-        contentSelector: '#delete-template',
+      var view = new DeleteView({
+        model: new ModalDlgModel({ title: 'Confirm Delete' }),
         contentModel: this.model
       });
 
@@ -74,18 +73,18 @@
 
   });
 
-  var ModalView = Backbone.View.extend({
+  var ModalDlgView = Backbone.View.extend({
     className: 'modal fade',
 
     template: _.template($('#modal-template').html()),
 
     events: {
-      'hidden.bs.modal': 'destroy'
+      'hidden.bs.modal': 'destroy',
+      'click .ok': 'handleOkBtn'
     },
 
     initialize: function (options) {
       _(this).bindAll();
-      this.contentSelector = options.contentSelector;
       this.contentModel = options.contentModel;
     },
 
@@ -104,10 +103,14 @@
     destroy: function () {
       this.$el.data('modal', null);
       this.remove();
-    },
+    }
+  });
 
-    show: function () {
-      this.$el.modal('show');
+  var DeleteView = ModalDlgView.extend({
+    contentSelector: '#delete-template',
+
+    handleOkBtn: function () {
+      this.contentModel.destroy({ wait: true }).always(this.destroy);
     }
   });
 
@@ -120,7 +123,7 @@
 
     initialize: function () {
       this.posts = this.$('#posts');
-      this.listenTo(this.collection, 'sync', this.render);
+      this.listenTo(this.collection, 'sync remove', this.render);
       this.collection.fetch();
     },
 

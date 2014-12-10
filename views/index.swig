@@ -40,14 +40,14 @@
         <div class="modal-body"></div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal"><%= cancelText %></button>
-          <button type="button" class="btn btn-primary"><%= okText %></button>
+          <button type="button" class="btn btn-primary ok"><%= okText %></button>
         </div>
       </div>
     </div>
   </script>
 
   <script type="text/template" id="delete-template">
-    <p>Are you sure you want to delete <em>"<%= title %>"</em>?</p>
+    <p>Are you sure you want to delete <em><%= title %></em>?</p>
   </script>
 
   <script type="text/template" id="post-template">

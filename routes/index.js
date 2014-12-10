@@ -39,11 +39,11 @@ router.post('/posts', function (req, res) {
   post.save(handleResponse(res, 201));
 });
 
-router.put('posts/:id', function (req, res) {
+router.put('/posts/:id', function (req, res) {
   Post.findByIdAndUpdate(req.params.id, req.body, handleResponse(res));
 });
 
-router.delete('posts/:id', function (req, res) {
+router.delete('/posts/:id', function (req, res) {
   Post.findByIdAndRemove(req.params.id, handleResponse(res));
 });
 
