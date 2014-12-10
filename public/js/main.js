@@ -106,7 +106,7 @@
     },
 
     render: function () {
-      var contentTmpl = _.template($(this.contentSelector).html());
+      var contentTmpl = _.template($(this.contentTmplSelector).html());
       var content = contentTmpl(this.contentModel.toJSON());
       
       this.$el
@@ -131,7 +131,7 @@
   });
 
   var EditView = ModalDlgView.extend({
-    contentSelector: '#form-template',
+    contentTmplSelector: '#form-template',
 
     handleSubmit: function (e) {
       e.preventDefault();
@@ -146,7 +146,7 @@
   });
 
   var DeleteView = ModalDlgView.extend({
-    contentSelector: '#delete-template',
+    contentTmplSelector: '#delete-template',
 
     handleSubmit: function (e) {
       e.preventDefault();
@@ -155,7 +155,7 @@
   });
 
   var AddView = ModalDlgView.extend({
-    contentSelector: '#form-template',
+    contentTmplSelector: '#form-template',
 
     handleSubmit: function (e) {
       e.preventDefault();
