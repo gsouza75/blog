@@ -9,6 +9,14 @@ body {
   white-space: nowrap;
 }
 
+#blog-name, #add-post {
+  float: left;
+}
+
+#add-post {
+  margin: 22px 0 0 2em;
+}
+
 #posts {
   display: none;
 }

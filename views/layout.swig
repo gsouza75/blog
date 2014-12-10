@@ -13,8 +13,9 @@
   {% endblock %}
 </head>
 <body>
-  <header id="header">
-    <h1 id="blog-name" class="container">Good Stuff</h1>
+  <header id="header" class="container clearfix">
+    <h1 id="blog-name">Good Stuff</h1>
+    <button id="add-post" class="btn btn-primary">Add New Post</button>
   </header>
 
   {% block content %}Default content{% endblock %}

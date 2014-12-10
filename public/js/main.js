@@ -9,7 +9,9 @@
       };
     },
 
-    idAttribute: '_id'
+    idAttribute: '_id',
+
+    urlRoot: '/posts'
   });
 
   var ModalDlgModel = Backbone.Model.extend({
@@ -142,11 +144,34 @@
     }
   });
 
+  var AddView = ModalDlgView.extend({
+    contentSelector: '#form-template',
+
+    handleOkBtn: function () {
+      postCollection.create({
+        title: this.$el.find('#title').val(),
+        body: this.$el.find('#body').val()
+      }, {
+        wait: true,
+        success: this.destroy,
+        error: this.destroy
+      });
+
+      // var attrs = {
+      //   title: this.$el.find('#title').val(),
+      //   body: this.$el.find('#body').val(),
+      //   date: (new Date()).getTime()
+      // };
+
+      // this.contentModel.save(attrs, { wait: true }).always(this.destroy);
+    }
+  });
+
   var Blog = Backbone.View.extend({
-    el: $('#content'),
+    el: $('body'),
 
     events: {
-      'submit #add-post-form': 'handleFormSubmit'
+      'click #add-post': 'handleAdd'
     },
 
     initialize: function () {
@@ -171,23 +196,23 @@
       return this;
     },
 
-    handleFormSubmit: function (e) {
-      function done() {
-        $form[0].reset();
-        $btn.removeAttr('disabled');
-      }
+    handleAdd: function () {
+      var dlgModel = new ModalDlgModel({
+          title: 'Add new post',
+          okText: 'Add'
+      });
 
-      e.preventDefault();
+      var postModel = new Post({
+        title: '',
+        body: ''
+      });
 
-      var $form = $(e.currentTarget);
-      var $btn = $form.find('.btn');
+      var view = new AddView({
+        model: dlgModel,
+        contentModel: postModel
+      });
 
-      $btn.attr('disabled', 'disabled');
-
-      this.collection.create({
-        title: $form.find('#title').val(),
-        body: $form.find('#body').val()
-      }, { wait: true, success: done, error: done });
+      view.render();
     }
   });
 
