@@ -29,4 +29,35 @@
       <button class="btn btn-primary" type="submit">Add</button>
     </form>
   </div>
+
+  <script type="text/template" id="modal-template">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title"><%= title %></h4>
+        </div>
+        <div class="modal-body"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal"><%= cancelText %></button>
+          <button type="button" class="btn btn-primary"><%= okText %></button>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/template" id="delete-template">
+    <p>Are you sure you want to delete <em>"<%= title %>"</em>?</p>
+  </script>
+
+  <script type="text/template" id="post-template">
+    <h2 class="title"><%= title %></h2>
+    <div class="metadata">
+      <time pubdate><%= date %></time>
+      <address class="author">by <a rel="author" href="#"><%= author %></a></address>
+    </div>
+    <p class="body"><%= body %></p>
+    <span class="action delete glyphicon glyphicon-trash" title="Delete"></span>
+    <span class="action edit glyphicon glyphicon-pencil" title="Edit"></span>
+  </script>
 {% endblock %}

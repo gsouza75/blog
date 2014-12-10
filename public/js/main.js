@@ -12,6 +12,13 @@
     idAttribute: '_id'
   });
 
+  var ModalModel = Backbone.Model.extend({
+    defaults: {
+      cancelText: 'Cancel',
+      okText: 'OK'
+    }
+  });
+
   var PostCollection = Backbone.Collection.extend({
     model: Post,
 
@@ -25,7 +32,7 @@
   var PostView = Backbone.View.extend({
     tagName: 'article',
 
-    template: _.template($('#post_template').html()),
+    template: _.template($('#post-template').html()),
 
     events: {
       'click .edit': 'handleEdit',
@@ -39,7 +46,7 @@
       };
     },
 
-    initialize: function() {
+    initialize: function () {
       this.listenTo(this.model, 'change', this.render);
       this.listenTo(this.model, 'destroy', this.remove);
     },
@@ -54,9 +61,54 @@
     },
 
     handleDelete: function () {
-      console.log('delete clicked');
+      var model = new ModalModel({ title: 'Confirm Delete' });
+
+      var view = new ModalView({
+        model: model, 
+        contentSelector: '#delete-template',
+        contentModel: this.model
+      });
+
+      view.render();
     }
 
+  });
+
+  var ModalView = Backbone.View.extend({
+    className: 'modal fade',
+
+    template: _.template($('#modal-template').html()),
+
+    events: {
+      'hidden.bs.modal': 'destroy'
+    },
+
+    initialize: function (options) {
+      _(this).bindAll();
+      this.contentSelector = options.contentSelector;
+      this.contentModel = options.contentModel;
+    },
+
+    render: function () {
+      var contentTmpl = _.template($(this.contentSelector).html());
+      var content = contentTmpl(this.contentModel.toJSON());
+      
+      this.$el.html(this.template(this.model.toJSON()));
+      this.$el.find('.modal-body').append($(content));
+
+      this.$el.modal('show');
+
+      return this;
+    },
+
+    destroy: function () {
+      this.$el.data('modal', null);
+      this.remove();
+    },
+
+    show: function () {
+      this.$el.modal('show');
+    }
   });
 
   var Blog = Backbone.View.extend({
@@ -66,7 +118,7 @@
       'submit #add-post-form': 'handleFormSubmit'
     },
 
-    initialize: function() {
+    initialize: function () {
       this.posts = this.$('#posts');
       this.listenTo(this.collection, 'sync', this.render);
       this.collection.fetch();
