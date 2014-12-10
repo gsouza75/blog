@@ -35,11 +35,11 @@ router.get('/posts', function (req, res) {
 
 router.post('/posts', function (req, res) {
   var post = new Post(req.body);
-  post.set({ author: 'Gustavo Souza' });
   post.save(handleResponse(res, 201));
 });
 
 router.put('/posts/:id', function (req, res) {
+  delete req.body._id;
   Post.findByIdAndUpdate(req.params.id, req.body, handleResponse(res));
 });
 

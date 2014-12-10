@@ -59,12 +59,27 @@
     remove: function () {},
 
     handleEdit: function () {
-      console.log('edit clicked');
+      var dlgModel = new ModalDlgModel({
+          title: 'Edit post',
+          okText: 'Update'
+      });
+
+      var view = new EditView({
+        model: dlgModel,
+        contentModel: this.model
+      });
+
+      view.render();
     },
 
     handleDelete: function () {
+      var dlgModel = new ModalDlgModel({
+        title: 'Confirm Delete',
+        okText: 'Delete'
+      });
+
       var view = new DeleteView({
-        model: new ModalDlgModel({ title: 'Confirm Delete' }),
+        model: dlgModel,
         contentModel: this.model
       });
 
@@ -103,6 +118,19 @@
     destroy: function () {
       this.$el.data('modal', null);
       this.remove();
+    }
+  });
+
+  var EditView = ModalDlgView.extend({
+    contentSelector: '#form-template',
+
+    handleOkBtn: function () {
+      var attrs = {
+        title: this.$el.find('#title').val(),
+        body: this.$el.find('#body').val()
+      };
+
+      this.contentModel.save(attrs, { wait: true }).always(this.destroy);
     }
   });
 

@@ -50,6 +50,19 @@
     <p>Are you sure you want to delete <em><%= title %></em>?</p>
   </script>
 
+  <script type="text/template" id="form-template">
+    <form id="post-form" action="/posts" method="post" role="form">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input class="form-control" name="title" id="title" placeholder="Enter title" value="<%= title %>" required>
+      </div>
+      <div class="form-group">
+        <label for="body">Body</label>
+        <textarea class="form-control" id="body" name="body" rows="8" placeholder="Enter body" required><%= body %></textarea>
+      </div>
+    </form>
+  </script>
+
   <script type="text/template" id="post-template">
     <h2 class="title"><%= title %></h2>
     <div class="metadata">
