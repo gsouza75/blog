@@ -21,15 +21,22 @@
   <script type="text/template" id="modal-template">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title"><%= title %></h4>
-        </div>
-        <div class="modal-body"></div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal"><%= cancelText %></button>
-          <button type="button" class="btn btn-primary ok"><%= okText %></button>
-        </div>
+        <form id="post-form" action="/posts" method="post" role="form"
+          data-bv-message="This value is not valid"
+          data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
+          data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
+          data-bv-feedbackicons-validating="glyphicon glyphicon-refresh"
+          data-bv-submitbuttons='button[type="submit"]'>
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title"><%= title %></h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal"><%= cancelText %></button>
+            <button type="submit" class="btn btn-primary ok"><%= okText %></button>
+          </div>
+        </form>
       </div>
     </div>
   </script>
@@ -39,16 +46,16 @@
   </script>
 
   <script type="text/template" id="form-template">
-    <form id="post-form" action="/posts" method="post" role="form">
-      <div class="form-group">
-        <label for="title">Title</label>
-        <input class="form-control" name="title" id="title" placeholder="Enter title" value="<%= title %>" required>
-      </div>
-      <div class="form-group">
-        <label for="body">Body</label>
-        <textarea class="form-control" id="body" name="body" rows="8" placeholder="Enter body" required><%= body %></textarea>
-      </div>
-    </form>
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input class="form-control" name="title" id="title" placeholder="Enter title" value="<%= title %>" required
+        data-bv-notempty-message="The title is required and cannot be empty">
+    </div>
+    <div class="form-group">
+      <label for="body">Body</label>
+      <textarea class="form-control" id="body" name="body" rows="8" placeholder="Enter body" required
+        data-bv-notempty-message="The body is required and cannot be empty"><%= body %></textarea>
+    </div>
   </script>
 
   <script type="text/template" id="post-template">

@@ -96,8 +96,8 @@
     template: _.template($('#modal-template').html()),
 
     events: {
-      'hidden.bs.modal': 'destroy',
-      'click .ok': 'handleOkBtn'
+      'shown.bs.modal': 'setupForm',
+      'hidden.bs.modal': 'destroy'
     },
 
     initialize: function (options) {
@@ -109,12 +109,19 @@
       var contentTmpl = _.template($(this.contentSelector).html());
       var content = contentTmpl(this.contentModel.toJSON());
       
-      this.$el.html(this.template(this.model.toJSON()));
-      this.$el.find('.modal-body').append($(content));
-
-      this.$el.modal('show');
+      this.$el
+        .html(this.template(this.model.toJSON()))
+        .find('.modal-body').append($(content))
+        .end()
+        .modal('show');
 
       return this;
+    },
+
+    setupForm: function () {
+      this.$el.find('#post-form')
+        .bootstrapValidator()
+        .on('success.form.bv', this.handleSubmit);
     },
 
     destroy: function () {
@@ -126,7 +133,9 @@
   var EditView = ModalDlgView.extend({
     contentSelector: '#form-template',
 
-    handleOkBtn: function () {
+    handleSubmit: function (e) {
+      e.preventDefault();
+
       var attrs = {
         title: this.$el.find('#title').val(),
         body: this.$el.find('#body').val()
@@ -139,7 +148,8 @@
   var DeleteView = ModalDlgView.extend({
     contentSelector: '#delete-template',
 
-    handleOkBtn: function () {
+    handleSubmit: function (e) {
+      e.preventDefault();
       this.contentModel.destroy({ wait: true }).always(this.destroy);
     }
   });
@@ -147,7 +157,9 @@
   var AddView = ModalDlgView.extend({
     contentSelector: '#form-template',
 
-    handleOkBtn: function () {
+    handleSubmit: function (e) {
+      e.preventDefault();
+
       postCollection.create({
         title: this.$el.find('#title').val(),
         body: this.$el.find('#body').val()
@@ -156,14 +168,6 @@
         success: this.destroy,
         error: this.destroy
       });
-
-      // var attrs = {
-      //   title: this.$el.find('#title').val(),
-      //   body: this.$el.find('#body').val(),
-      //   date: (new Date()).getTime()
-      // };
-
-      // this.contentModel.save(attrs, { wait: true }).always(this.destroy);
     }
   });
 
