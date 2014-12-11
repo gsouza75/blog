@@ -132,7 +132,8 @@
     setupForm: function () {
       this.$el.find('#post-form')
         .bootstrapValidator()
-        .on('success.form.bv', this.handleSubmit);
+        .on('success.form.bv', this.handleSubmit)
+        .find('input').eq(0).focus();
     },
 
     destroy: function () {
