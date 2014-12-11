@@ -11,7 +11,14 @@
 
     idAttribute: '_id',
 
-    urlRoot: '/posts'
+    urlRoot: '/posts',
+
+    toJSON: function () {
+      var obj = this.attributes;
+      var date = new Date(Date.parse(obj.date)).toUTCString();
+      obj.date = date;
+      return obj;
+    }
   });
 
   var ModalDlgModel = Backbone.Model.extend({
@@ -144,6 +151,7 @@
     displayError: function (model, res) {
       var err = res.responseJSON;
 
+      // TODO: Doesn't the plugin's API have an interface for this?
       this.$('form .form-group')
         .addClass('has-error')
         .removeClass('has-success')
