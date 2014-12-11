@@ -107,7 +107,7 @@
     template: _.template($('#modal-template').html()),
 
     events: {
-      'shown.bs.modal': 'setupForm',
+      'shown.bs.modal': 'onLoaded',
       'hidden.bs.modal': 'destroy'
     },
 
@@ -129,7 +129,7 @@
       return this;
     },
 
-    setupForm: function () {
+    onLoaded: function () {
       this.$el.find('#post-form')
         .bootstrapValidator()
         .on('success.form.bv', this.handleSubmit)
@@ -139,6 +139,20 @@
     destroy: function () {
       this.$el.data('modal', null);
       this.remove();
+    },
+
+    displayError: function (model, res) {
+      var err = res.responseJSON;
+
+      this.$('form .form-group')
+        .addClass('has-error')
+        .removeClass('has-success')
+        .find('.form-control-feedback')
+          .addClass('glyphicon-remove')
+          .removeClass('glyphicon-ok')
+          .end()
+        .filter(':last-child')
+        .find('small').text(err.message).show();
     }
   });
 
@@ -153,8 +167,10 @@
         body: this.$el.find('#body').val()
       };
 
-      this.contentModel.save(attrs, { wait: true }).always(this.destroy);
-    }
+      this.contentModel.save(attrs, { wait: true })
+        .done(this.destroy)
+        .fail(this.displayError);
+    },
   });
 
   var DeleteView = ModalDlgView.extend({
@@ -162,7 +178,9 @@
 
     handleSubmit: function (e) {
       e.preventDefault();
-      this.contentModel.destroy({ wait: true }).always(this.destroy);
+      this.contentModel.destroy({ wait: true })
+        .done(this.destroy)
+        .fail(this.displayError);
     }
   });
 
@@ -178,7 +196,7 @@
       }, {
         wait: true,
         success: this.destroy,
-        error: this.destroy
+        error: this.displayError
       });
     }
   });

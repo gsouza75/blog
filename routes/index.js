@@ -6,18 +6,21 @@ function handleResponse(res, successStatus, errorStatus) {
   return function (err, result) {
     var json, status;
 
+    function processResult() {
+      if (!result) return null;
+      
+      return result.length ? { 
+        posts: result.map(function (post) { return post.toJSON(); }),
+        count: result.length
+      } : result.toJSON();
+    } 
+
     if (err) {
       status = errorStatus || 400;
       json = { message: err.message, status: errorStatus || 400 };
     } else {
       status = successStatus || 200;
-      json = result.length ? 
-        result.map(function (post) { return post.toJSON(); }) : 
-        result.toJSON();
-    }
-
-    if (res.locals.count != null) {
-      json = { count: res.locals.count, posts: json };
+      json = processResult();
     }
 
     res
@@ -34,19 +37,16 @@ router.get('/', function (req, res) {
 });
 
 router.get('/posts', function (req, res) {
-  Post.count({}, function (err, count) {
     var query = req.query;
     var limit = query && query.limit ? query.limit : 0;
     var skip = query && query.skip ? query.skip : 0;
     var dbQuery = { skip: skip, limit: limit, sort: { date: -1 } };
 
-    res.locals.count = count;
-
     Post.find({}, null, dbQuery, handleResponse(res));
-  });
 });
 
 router.post('/posts', function (req, res) {
+  // return res.status(400).json({ message: 'Invalid something....' });
   var post = new Post(req.body);
   post.save(handleResponse(res, 201));
 });
