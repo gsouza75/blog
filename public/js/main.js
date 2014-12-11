@@ -31,7 +31,7 @@
     limit: 2,
 
     initialize: function () {
-      this.offset = 0;
+      this.skip = 0;
     },
 
     parse: function (res) {
@@ -193,11 +193,50 @@
       'role': 'group'
     },
 
+    events: {
+      'click .prev': 'handleBtnClick',
+      'click .next': 'handleBtnClick'
+    },
+
     initialize: function () {},
 
     render: function () {
       this.$el.html(this.template());
+      this.setButtonStates();
       return this;
+    },
+
+    handleBtnClick: function (e) {
+      var $target = $(e.currentTarget);
+      var options = { data: {} };
+      var limit = this.collection.limit;
+
+      this.collection.skip += $target.is('.next') ? limit : -limit;
+
+      options.data.limit = limit;
+      options.data.skip = this.collection.skip;
+
+      this.collection.fetch(options);
+    },
+
+    setButtonStates: function () {
+      var skip = this.collection.skip;
+      var limit = this.collection.limit;
+      var count = this.collection.count;
+
+      var $prev = this.$('.prev');
+      var $next = this.$('.next');
+
+      if (count <= limit) {
+        $prev.attr('disabled', 'disabled');
+        $next.attr('disabled', 'disabled');
+      } else if (skip === 0) {
+        $prev.attr('disabled', 'disabled');
+        $next.removeAttr('disabled');
+      } else if (skip + limit >= count) {
+        $prev.removeAttr('disabled');
+        $next.attr('disabled', 'disabled');
+      }
     }
   });
 
@@ -216,7 +255,11 @@
 
       this.listenTo(this.collection, 'sync remove', this.render);
       
-      this.collection.fetch();
+      var options = {
+        data: { limit: this.collection.limit, skip: this.collection.skip }
+      };
+
+      this.collection.fetch(options);
     },
 
     addPost: function (post) {
@@ -243,10 +286,10 @@
 
     renderPagination: function () {
       if (!this.pagination) {
-        this.pagination = new PaginationView();
+        this.pagination = new PaginationView({ collection: this.collection });
       }
 
-      if (this.collection.size() > this.collection.limit) {
+      if (this.collection.count > this.collection.limit) {
         this.posts.after(this.pagination.render().el);
       }
     },

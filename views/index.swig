@@ -76,7 +76,7 @@
   </script>
 
   <script type="text/template" id="pagination-template">
-    <button type="button" class="btn btn-default">Previous</button>
-    <button type="button" class="btn btn-default">Next</button>
+    <button type="button" class="btn btn-default prev">Previous</button>
+    <button type="button" class="btn btn-default next">Next</button>
   </script>
 {% endblock %}
