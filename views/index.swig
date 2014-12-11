@@ -67,7 +67,7 @@
   <script type="text/template" id="post-template">
     <h2 class="title"><%= title %></h2>
     <div class="metadata">
-      <time class="time" pubdate="<%= date %>"><%= date %></time>
+      <time class="time" pubdate="<%= date %>"><%= new Date(Date.parse(date)).toUTCString() %></time>
       <address class="author">by <a rel="author" href="#"><%= author %></a></address>
     </div>
     <p class="body"><%= body %></p>

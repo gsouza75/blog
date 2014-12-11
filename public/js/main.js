@@ -11,14 +11,7 @@
 
     idAttribute: '_id',
 
-    urlRoot: '/posts',
-
-    toJSON: function () {
-      var obj = this.attributes;
-      var date = new Date(Date.parse(obj.date)).toUTCString();
-      obj.date = date;
-      return obj;
-    }
+    urlRoot: '/posts'
   });
 
   var ModalDlgModel = Backbone.Model.extend({
