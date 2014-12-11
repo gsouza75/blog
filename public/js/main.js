@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var Post = Backbone.Model.extend({
+  var PostModel = Backbone.Model.extend({
     defaults: function () {
       return {
         author: 'Gustavo Souza',
@@ -21,10 +21,23 @@
     }
   });
 
+  // var PaginationModel
+
   var PostCollection = Backbone.Collection.extend({
-    model: Post,
+    model: PostModel,
 
     url: '/posts',
+
+    limit: 2,
+
+    initialize: function () {
+      this.offset = 0;
+    },
+
+    parse: function (res) {
+      this.count = Number(res.count);
+      return res.posts;
+    },
 
     comparator: function (post) {
       return -Date.parse(post.get('date'));
@@ -171,6 +184,23 @@
     }
   });
 
+  var PaginationView = Backbone.View.extend({
+    template: _.template($('#pagination-template').html()),
+
+    attributes: {
+      'id': 'pagination',
+      'class': 'btn-group',
+      'role': 'group'
+    },
+
+    initialize: function () {},
+
+    render: function () {
+      this.$el.html(this.template());
+      return this;
+    }
+  });
+
   var Blog = Backbone.View.extend({
     el: $('body'),
 
@@ -179,8 +209,13 @@
     },
 
     initialize: function () {
+      _(this).bindAll();
+
       this.posts = this.$('#posts');
+      this.pagination = null;
+
       this.listenTo(this.collection, 'sync remove', this.render);
+      
       this.collection.fetch();
     },
 
@@ -196,8 +231,24 @@
     render: function () {
       this.posts.empty();
       this.addAll();
-      this.posts.hide().fadeIn();
+      
+      this.posts
+        .hide()
+        .fadeIn()
+        .promise()
+        .done(this.renderPagination);
+
       return this;
+    },
+
+    renderPagination: function () {
+      if (!this.pagination) {
+        this.pagination = new PaginationView();
+      }
+
+      if (this.collection.size() > this.collection.limit) {
+        this.posts.after(this.pagination.render().el);
+      }
     },
 
     handleAdd: function () {
@@ -206,7 +257,7 @@
           okText: 'Add'
       });
 
-      var postModel = new Post({
+      var postModel = new PostModel({
         title: '',
         body: ''
       });

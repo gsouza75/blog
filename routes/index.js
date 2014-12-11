@@ -16,6 +16,10 @@ function handleResponse(res, successStatus, errorStatus) {
         result.toJSON();
     }
 
+    if (res.locals.count != null) {
+      json = { count: res.locals.count, posts: json };
+    }
+
     res
       .status(status)
       .json(json);
@@ -30,7 +34,16 @@ router.get('/', function (req, res) {
 });
 
 router.get('/posts', function (req, res) {
-  Post.find({}, handleResponse(res));
+  Post.count({}, function (err, count) {
+    var query = req.query;
+    var limit = query && query.limit ? query.limit : 0;
+    var skip = query && query.skip ? query.skip : 0;
+    var dbQuery = { skip: skip, limit: limit, sort: { date: -1 } };
+
+    res.locals.count = count;
+
+    Post.find({}, null, dbQuery, handleResponse(res));
+  });
 });
 
 router.post('/posts', function (req, res) {

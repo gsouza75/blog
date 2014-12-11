@@ -22,8 +22,20 @@ body {
 }
 
 .post {
-  margin-bottom: 20px;
+  margin-bottom: 36px;
   position: relative;
+}
+
+.post .metadata {
+  font-style: italic;
+}
+
+.post .time {
+  color: #aaa;
+}
+
+.post .author {
+  font-style: inherit;
 }
 
 .action {
@@ -69,4 +81,12 @@ input, label, textarea {
 
 :-ms-input-placeholder {  
    font-style: italic;
+}
+
+#pagination {
+  margin-bottom: 40px;
+}
+
+#pagination .btn {
+  width: 80px;
 }

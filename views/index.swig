@@ -7,7 +7,7 @@
       <article class="post" data-id="{{ post._id.toString() }}">
         <h2 class="title">{{ post.title }}</h2>
         <div class="metadata">
-          <time pubdate>{{ post.date.toISOString() }}</time>
+          <time class="time" pubdate>{{ post.date.toISOString() }}</time>
           <address class="author">by <a rel="author" href="#">{{ post.author }}</a></address>
         </div>
         <p class="body">{{ post.body }}</p>
@@ -16,6 +16,12 @@
       </article>
       {% endfor %}
     </div>
+    <!--
+    <div id="pagination" class="btn-group" role="group">
+      <button type="button" class="btn btn-default" disabled>Previous</button>
+      <button type="button" class="btn btn-default">Next</button>
+    </div>
+    -->
   </div>
 
   <script type="text/template" id="modal-template">
@@ -61,11 +67,16 @@
   <script type="text/template" id="post-template">
     <h2 class="title"><%= title %></h2>
     <div class="metadata">
-      <time pubdate><%= date %></time>
+      <time class="time" pubdate="<%= date %>"><%= date %></time>
       <address class="author">by <a rel="author" href="#"><%= author %></a></address>
     </div>
     <p class="body"><%= body %></p>
     <span class="action delete glyphicon glyphicon-trash" title="Delete"></span>
     <span class="action edit glyphicon glyphicon-pencil" title="Edit"></span>
+  </script>
+
+  <script type="text/template" id="pagination-template">
+    <button type="button" class="btn btn-default">Previous</button>
+    <button type="button" class="btn btn-default">Next</button>
   </script>
 {% endblock %}
