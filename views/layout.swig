@@ -14,13 +14,13 @@
   {% endblock %}
 </head>
 <body>
-  <header id="header" class="container clearfix">
-    <h1 id="blog-name">Good Stuff</h1>
-    <button id="add-post" class="btn btn-primary">Add New Post</button>
-  </header>
+  <div class="container-fluid">
+    <header id="header" class="row clearfix">
+      <h1 id="blog-name" class="col-sm-12">Good Stuff</h1>
+    </header>
 
-  {% block content %}Default content{% endblock %}
-
+    {% block content %}Default content{% endblock %}
+  </div>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.js"></script>

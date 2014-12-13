@@ -2,23 +2,65 @@ body {
   color: #555;
 }
 
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#header {
+  background: #eee;
+  height: 70px;
+}
+
 .title {
+  line-height: 1;
+  margin-top: 0;
   max-width: 80%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
+#nav {
+  padding-right: 0;
+}
+
+.nav-content li {
+  border-bottom: 1px solid #eee;
+}
+
+.nav-link {
+  color: #666;
+  display: block;
+  padding: 20px 32px;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  background: #fafafa;
+  text-decoration: none;
+}
+
 #blog-name, #add-post {
   float: left;
 }
 
+#blog-name {
+  line-height: 70px;
+  margin: 0;
+}
+
 #add-post {
-  margin: 22px 0 0 2em;
+  display: block;
+  float: none;
+  margin: 22px auto;
 }
 
 #posts {
+  border-left: 1px solid #eee;
   display: none;
+  padding-top: 16px;
 }
 
 .post {

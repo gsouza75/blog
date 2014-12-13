@@ -1,8 +1,16 @@
 {% extends 'layout.swig' %}
 
 {% block content %}
-  <div id="content" role="main" class="container">
-    <div id="posts">
+  <div id="content" class="row clearfix">
+    <nav id="nav" class="col-sm-4" role="navigation">
+      <ol class="nav-content">
+        <li><a class="nav-link" href="#">Jan 5, 2014</a></li>
+        <li><a class="nav-link" href="#">Jan 5, 2014</a></li>
+        <li><a class="nav-link" href="#">Jan 5, 2014</a></li>
+      </ol>
+      <button id="add-post" class="btn btn-primary">Add New Post</button>
+    </nav>
+    <div id="posts" class="col-sm-8" role="main">
       {% for post in posts %}
       <article class="post" data-id="{{ post._id.toString() }}">
         <h2 class="title">{{ post.title }}</h2>
