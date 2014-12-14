@@ -5,7 +5,7 @@
     <nav id="nav" class="col-sm-4" role="navigation">
       <button id="add-post" class="btn btn-primary">Add New Post</button>
     </nav>
-    <div id="posts" class="col-sm-8" role="main"></div>
+    <div id="main" class="col-sm-8" role="main"></div>
   </div>
 
   <script type="text/template" id="modal-template">

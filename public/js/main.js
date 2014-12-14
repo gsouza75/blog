@@ -268,14 +268,14 @@
       _(this).bindAll();
 
       this.nav = this.$('#nav');
-      this.posts = this.$('#posts');
+      this.main = this.$('#main');
 
       this.navListModel = new NavListModel();
 
       this.listenTo(this.collection, 'reset', this.render);
       this.listenTo(this.collection, 'add remove', this.showNav);
-      this.listenTo(this.collection, 'change', this.showPost);
-      this.listenTo(this.navListModel, 'change:activeIndex', this.showPost);
+      this.listenTo(this.collection, 'change', this.showMain);
+      this.listenTo(this.navListModel, 'change:activeIndex', this.showMain);
 
       this.collection.fetch({ add: false, reset: true });
     },
@@ -302,12 +302,12 @@
       }
     },
 
-    showPost: function () {
+    showMain: function () {
       var post = this.collection.at(this.navListModel.get('activeIndex'));
 
       this.postView = new PostView({ model: post });
 
-      this.posts
+      this.main
         .hide()
         .empty()
         .append(this.postView.render().el)
