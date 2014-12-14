@@ -4,12 +4,10 @@
   var PostModel = Backbone.Model.extend({
     defaults: function () {
       return {
-        author: 'Gustavo Souza',
-        date: (new Date()).getTime()
+        title: '',
+        text: ''
       };
     },
-
-    idAttribute: '_id',
 
     urlRoot: '/Blog/api'
   });
@@ -33,7 +31,7 @@
     url: '/Blog/api',
 
     comparator: function (post) {
-      return -Date.parse(post.get('date'));
+      return -Date.parse(post.get('timestamp'));
     }
   });
 
@@ -228,7 +226,7 @@
 
       this.collection.create({
         title: this.$el.find('#title').val(),
-        body: this.$el.find('#body').val()
+        text: this.$el.find('#text').val()
       }, {
         wait: true,
         success: this.destroy,
@@ -245,7 +243,7 @@
 
       var attrs = {
         title: this.$el.find('#title').val(),
-        body: this.$el.find('#body').val()
+        text: this.$el.find('#text').val()
       };
 
       this.contentModel
@@ -334,10 +332,7 @@
           okText: 'Add'
       });
 
-      var postModel = new PostModel({
-        title: '',
-        body: ''
-      });
+      var postModel = new PostModel();
 
       var view = new AddView({
         model: dlgModel,

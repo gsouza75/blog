@@ -38,28 +38,28 @@
   <script type="text/template" id="form-template">
     <div class="form-group">
       <label for="title">Title</label>
-      <input class="form-control" name="title" id="title" placeholder="Enter title text..." value="<%= title %>" required
+      <input class="form-control" name="title" id="title" placeholder="Enter title..." value="<%= title %>" required
         data-bv-notempty-message="The title is required and cannot be empty">
     </div>
     <div class="form-group">
-      <label for="body">Body</label>
-      <textarea class="form-control" id="body" name="body" rows="8" placeholder="Enter body text..." required
-        data-bv-notempty-message="The body is required and cannot be empty"><%= body %></textarea>
+      <label for="text">Text</label>
+      <textarea class="form-control" id="text" name="text" rows="8" placeholder="Enter text..." required
+        data-bv-notempty-message="The text is required and cannot be empty"><%= text %></textarea>
     </div>
   </script>
 
   <script type="text/template" id="post-template">
     <h2 class="title"><%= title %></h2>
     <div class="metadata">
-      <time class="time" pubdate="<%= date %>"><%= new Date(Date.parse(date)).toUTCString() %></time>
-      <address class="author">by <a rel="author" href="#"><%= author %></a></address>
+      <time class="time" pubdate="<%= timestamp %>"><%= timestamp %></time>
+      <address class="author">by <a rel="author" href="#">Gustavo Souza</a></address>
     </div>
-    <p class="body"><%= body %></p>
+    <p class="text"><%= text %></p>
     <a class="action edit glyphicon glyphicon-pencil" href="#" title="Edit"></a>
     <a class="action delete glyphicon glyphicon-trash" href="#" title="Delete"></a>
   </script>
 
   <script type="text/template" id="nav-item-template">
-    <a class="nav-link" href="/Blog/api/<%= _id %>"><%= new Date(Date.parse(date)).toUTCString() %></a>
+    <a class="nav-link" href="/Blog/api/<%= id %>"><%= timestamp %></a>
   </script>
 {% endblock %}

@@ -9,7 +9,7 @@ function handleResponse(res, successStatus, errorStatus) {
     function processResult() {
       if (!result) return null;
       
-      return result.length ?
+      return Array.isArray(result) ?
         result.map(function (post) { return post.toJSON(); }) :
         result.toJSON();
     } 
