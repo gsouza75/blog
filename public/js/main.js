@@ -248,7 +248,8 @@
         body: this.$el.find('#body').val()
       };
 
-      this.contentModel.save(attrs, { wait: true, type: 'post' })
+      this.contentModel
+        .save(attrs, { wait: true, type: 'post' })
         .done(this.destroy)
         .fail(this.displayError);
     },
@@ -259,7 +260,9 @@
 
     handleSubmit: function (e) {
       e.preventDefault();
-      this.contentModel.destroy({ wait: true })
+
+      this.contentModel
+        .destroy({ wait: true })
         .done(this.destroy)
         .fail(this.displayError);
     }
