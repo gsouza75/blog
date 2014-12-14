@@ -220,6 +220,23 @@
     }
   });
 
+  var AddView = ModalDlgView.extend({
+    contentTmplSelector: '#form-template',
+
+    handleSubmit: function (e) {
+      e.preventDefault();
+
+      this.collection.create({
+        title: this.$el.find('#title').val(),
+        body: this.$el.find('#body').val()
+      }, {
+        wait: true,
+        success: this.destroy,
+        error: this.displayError
+      });
+    }
+  });
+
   var EditView = ModalDlgView.extend({
     contentTmplSelector: '#form-template',
 
@@ -245,23 +262,6 @@
       this.contentModel.destroy({ wait: true })
         .done(this.destroy)
         .fail(this.displayError);
-    }
-  });
-
-  var AddView = ModalDlgView.extend({
-    contentTmplSelector: '#form-template',
-
-    handleSubmit: function (e) {
-      e.preventDefault();
-
-      postCollection.create({
-        title: this.$el.find('#title').val(),
-        body: this.$el.find('#body').val()
-      }, {
-        wait: true,
-        success: this.destroy,
-        error: this.displayError
-      });
     }
   });
 
@@ -338,6 +338,7 @@
 
       var view = new AddView({
         model: dlgModel,
+        collection: this.collection,
         contentModel: postModel
       });
 
