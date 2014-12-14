@@ -293,7 +293,7 @@
 
       // Manually trigger change in case the active index is already 0
       // since we still need to show the first post.
-      if (this.navListModel.get('activeIndex') === 0) {
+      if (!this.navListModel.get('activeIndex')) {
         this.collection.trigger('change');
       }
     },
