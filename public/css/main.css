@@ -24,7 +24,7 @@ ul {
 }
 
 #nav {
-  padding: 1em;
+  padding: 0 14px 14px;
 }
 
 .nav-content {
@@ -50,7 +50,11 @@ ul {
 
 #main {
   display: none;
-  padding: 16px 4%;
+  padding: 0 4% 16px;
+}
+
+#content {
+  padding-top: 16px;
 }
 
 .post {
