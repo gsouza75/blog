@@ -54,10 +54,10 @@
       };
     },
 
-    initialize: function () {
-      this.listenTo(this.model, 'change', this.render);
-      this.listenTo(this.model, 'destroy', this.remove);
-    },
+    // initialize: function () {
+    //   this.listenTo(this.model, 'change', this.render);
+    //   this.listenTo(this.model, 'destroy', this.remove);
+    // },
 
     render: function () {
       this.$el.html(this.template(this.model.toJSON()));
@@ -68,7 +68,7 @@
 
     handleEdit: function (e) {
       e.preventDefault();
-      
+
       var dlgModel = new ModalDlgModel({
           title: 'Edit post',
           okText: 'Update'
@@ -84,7 +84,7 @@
 
     handleDelete: function (e) {
       e.preventDefault();
-      
+
       var dlgModel = new ModalDlgModel({
         title: 'Confirm Delete',
         okText: 'Delete'
@@ -288,7 +288,7 @@
 
       this.nav
         .hide()
-        .find('.nav').remove()
+        .find('.nav-content').remove()
         .end()
         .prepend(this.navListView.render().el)
         .fadeIn();
@@ -303,15 +303,24 @@
     },
 
     showMain: function () {
+      var self = this;
       var post = this.collection.at(this.navListModel.get('activeIndex'));
 
-      this.postView = new PostView({ model: post });
+      post.fetch({
+        success: function (post) {
+          self.postView = new PostView({ model: post });
 
-      this.main
-        .hide()
-        .empty()
-        .append(this.postView.render().el)
-        .fadeIn();
+          self.main
+            .hide()
+            .empty()
+            .append(self.postView.render().el)
+            .fadeIn();
+        },
+
+        fail:function () {
+          // TODO: Implement.
+        }
+      });
     },
 
     render: function () {
