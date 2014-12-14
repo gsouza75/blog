@@ -288,6 +288,14 @@
         .end()
         .prepend(this.navListView.render().el)
         .fadeIn();
+
+      this.navListModel.set({ activeIndex: 0 });
+
+      // Manually trigger change in case the active index is already 0
+      // since we still need to show the first post.
+      if (this.navListModel.get('activeIndex') === 0) {
+        this.collection.trigger('change');
+      }
     },
 
     showPost: function () {
@@ -305,10 +313,6 @@
     render: function () {
       if (this.collection.size() > 0) {
         this.showNav();
-
-        if (this.navListModel.get('activeIndex') < 0) {
-          this.navListModel.set({ activeIndex: 0 });
-        }
       }
 
       return this;
