@@ -11,7 +11,7 @@
 
     idAttribute: '_id',
 
-    urlRoot: '/posts'
+    urlRoot: '/Blog/api'
   });
 
   var ModalDlgModel = Backbone.Model.extend({
@@ -30,7 +30,7 @@
   var PostCollection = Backbone.Collection.extend({
     model: PostModel,
 
-    url: '/posts',
+    url: '/Blog/api',
 
     comparator: function (post) {
       return -Date.parse(post.get('date'));
@@ -66,7 +66,9 @@
 
     remove: function () {},
 
-    handleEdit: function () {
+    handleEdit: function (e) {
+      e.preventDefault();
+      
       var dlgModel = new ModalDlgModel({
           title: 'Edit post',
           okText: 'Update'
@@ -80,7 +82,9 @@
       view.render();
     },
 
-    handleDelete: function () {
+    handleDelete: function (e) {
+      e.preventDefault();
+      
       var dlgModel = new ModalDlgModel({
         title: 'Confirm Delete',
         okText: 'Delete'
@@ -293,7 +297,7 @@
 
       // Manually trigger change in case the active index is already 0
       // since we still need to show the first post.
-      if (!this.navListModel.get('activeIndex')) {
+      if (this.navListModel.get('activeIndex') === 0) {
         this.collection.trigger('change');
       }
     },

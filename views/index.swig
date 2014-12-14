@@ -55,11 +55,11 @@
       <address class="author">by <a rel="author" href="#"><%= author %></a></address>
     </div>
     <p class="body"><%= body %></p>
-    <span class="action delete glyphicon glyphicon-trash" title="Delete"></span>
-    <span class="action edit glyphicon glyphicon-pencil" title="Edit"></span>
+    <a class="action edit glyphicon glyphicon-pencil" href="#" title="Edit"></a>
+    <a class="action delete glyphicon glyphicon-trash" href="#" title="Delete"></a>
   </script>
 
   <script type="text/template" id="nav-item-template">
-    <a class="nav-link" href="/posts/<%= _id %>"><%= new Date(Date.parse(date)).toUTCString() %></a>
+    <a class="nav-link" href="/Blog/api/<%= _id %>"><%= new Date(Date.parse(date)).toUTCString() %></a>
   </script>
 {% endblock %}

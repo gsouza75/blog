@@ -35,7 +35,7 @@ router.get('/', function (req, res) {
   });
 });
 
-router.get('/posts', function (req, res) {
+router.get('/Blog/api', function (req, res) {
     var query = req.query;
     var limit = query && query.limit ? query.limit : 0;
     var skip = query && query.skip ? query.skip : 0;
@@ -44,27 +44,27 @@ router.get('/posts', function (req, res) {
     Post.find({}, null, dbQuery, handleResponse(res));
 });
 
-router.get('/posts/:id', function (req, res) {
+router.get('/Blog/api/:id', function (req, res) {
   Post.findById(req.params.id, handleResponse(res));
 });
 
-router.post('/posts', function (req, res) {
+router.post('/Blog/api', function (req, res) {
   // return res.status(400).json({ message: 'Invalid something....' });
   var post = new Post(req.body);
   post.save(handleResponse(res, 201));
 });
 
-router.put('/posts/:id', function (req, res) {
+router.put('/Blog/api/:id', function (req, res) {
   delete req.body._id;
   Post.findByIdAndUpdate(req.params.id, req.body, handleResponse(res));
 });
 
-router.post('/posts/:id', function (req, res) {
+router.post('/Blog/api/:id', function (req, res) {
   delete req.body._id;
   Post.findByIdAndUpdate(req.params.id, req.body, handleResponse(res));
 });
 
-router.delete('/posts/:id', function (req, res) {
+router.delete('/Blog/api/:id', function (req, res) {
   Post.findByIdAndRemove(req.params.id, handleResponse(res));
 });
 
