@@ -48,6 +48,7 @@ ul {
   display: block;
   float: none;
   margin: 22px auto;
+  width: 100%;
 }
 
 #main {
