@@ -77,9 +77,9 @@ ul {
 .action:hover,
 .action:link,
 .action:visited {
-  color: #555;
+  color: inherit;
   cursor: pointer;
-  opacity: 0;
+  opacity: 0.5;
   position: absolute;
   text-decoration: none;
   top: 12px;
@@ -87,11 +87,7 @@ ul {
           transition: opacity 0.2s linear;
 }
 
-.post:hover .action {
-  opacity: 0.5;
-}
-
-.post:hover .action:hover {
+.action:hover {
   opacity: 1;
 }
 
