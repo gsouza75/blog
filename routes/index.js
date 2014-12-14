@@ -9,10 +9,9 @@ function handleResponse(res, successStatus, errorStatus) {
     function processResult() {
       if (!result) return null;
       
-      return result.length ? { 
-        posts: result.map(function (post) { return post.toJSON(); }),
-        count: result.length
-      } : result.toJSON();
+      return result.length ?
+        result.map(function (post) { return post.toJSON(); }) :
+        result.toJSON();
     } 
 
     if (err) {
@@ -43,6 +42,10 @@ router.get('/posts', function (req, res) {
     var dbQuery = { skip: skip, limit: limit, sort: { date: -1 } };
 
     Post.find({}, null, dbQuery, handleResponse(res));
+});
+
+router.get('/posts/:id', function (req, res) {
+  Post.findById(req.params.id, handleResponse(res));
 });
 
 router.post('/posts', function (req, res) {

@@ -2,15 +2,18 @@ body {
   color: #555;
 }
 
-ol {
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 #header {
-  background: #eee;
-  height: 70px;
+  background: #fafafa;
+  margin: 0 -15px;
+  padding-bottom: 0;
+  /*background: #eee;
+  height: 70px;*/
 }
 
 .title {
@@ -23,10 +26,10 @@ ol {
 }
 
 #nav {
-  padding-right: 0;
+  padding: 1em;
 }
 
-.nav-content li {
+/*.nav-content li {
   border-bottom: 1px solid #eee;
 }
 
@@ -40,7 +43,7 @@ ol {
 .nav-link:hover {
   background: #fafafa;
   text-decoration: none;
-}
+}*/
 
 #blog-name, #add-post {
   float: left;
@@ -60,7 +63,7 @@ ol {
 #posts {
   border-left: 1px solid #eee;
   display: none;
-  padding-top: 16px;
+  padding: 16px 4%;
 }
 
 .post {

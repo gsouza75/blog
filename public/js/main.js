@@ -21,21 +21,16 @@
     }
   });
 
+  var NavListModel = Backbone.Model.extend({
+    defaults: {
+      activeIndex: -1
+    }
+  });
+
   var PostCollection = Backbone.Collection.extend({
     model: PostModel,
 
     url: '/posts',
-
-    limit: 2,
-
-    initialize: function () {
-      this.skip = 0;
-    },
-
-    parse: function (res) {
-      this.count = Number(res.count);
-      return res.posts;
-    },
 
     comparator: function (post) {
       return -Date.parse(post.get('date'));
@@ -98,7 +93,63 @@
 
       view.render();
     }
+  });
 
+  var NavListView = Backbone.View.extend({
+    tagName: 'ul',
+
+    events: {
+      'click .nav-link': 'handleItemClick'
+    },
+
+    attributes: function () {
+      return {
+        'data-id': this.model.get('_id'),
+        'class': 'nav-content nav nav-pills nav-stacked'
+      };
+    },
+
+    initialize: function () {
+      this.listenTo(this.model, 'change:activeIndex', this.update);
+      // this.listenTo(this.collection, 'add remove', this.render);
+    },
+
+    handleItemClick: function (e) {
+      e.preventDefault();
+      var index = $(e.currentTarget).closest('li').index();
+      this.model.set({ activeIndex: index });
+    },
+
+    update: function () {
+        this.$el
+          .find('li')
+          .removeClass('active')
+          .eq(this.model.get('activeIndex'))
+          .addClass('active');
+    },
+
+    render: function () {
+      var self = this;
+      
+      this.collection.each(function (model) {
+        var view = new NavItemView({ model: model });
+        self.$el.append(view.render().el);
+      });
+      
+      this.update();
+      return this;
+    }
+  });
+
+  var NavItemView = Backbone.View.extend({
+    tagName: 'li',
+
+    template: _.template($('#nav-item-template').html()),
+
+    render: function () {
+      this.$el.append(this.template(this.model.toJSON()));
+      return this;
+    }
   });
 
   var ModalDlgView = Backbone.View.extend({
@@ -202,63 +253,6 @@
     }
   });
 
-  var PaginationView = Backbone.View.extend({
-    template: _.template($('#pagination-template').html()),
-
-    attributes: {
-      'id': 'pagination',
-      'class': 'btn-group',
-      'role': 'group'
-    },
-
-    events: {
-      'click .prev': 'handleBtnClick',
-      'click .next': 'handleBtnClick'
-    },
-
-    initialize: function () {},
-
-    render: function () {
-      this.$el.html(this.template());
-      this.setButtonStates();
-      return this;
-    },
-
-    handleBtnClick: function (e) {
-      var $target = $(e.currentTarget);
-      var options = { data: {}, reset: true };
-      var limit = this.collection.limit;
-
-      this.collection.skip += $target.is('.next') ? limit : -limit;
-
-      options.data.limit = limit;
-      options.data.skip = this.collection.skip;
-
-      this.collection.fetch(options);
-      this.setButtonStates();
-    },
-
-    setButtonStates: function () {
-      var skip = this.collection.skip;
-      var limit = this.collection.limit;
-      var count = this.collection.count;
-
-      var $prev = this.$('.prev');
-      var $next = this.$('.next');
-
-      if (count <= limit) {
-        $prev.attr('disabled', 'disabled');
-        $next.attr('disabled', 'disabled');
-      } else if (skip === 0) {
-        $prev.attr('disabled', 'disabled');
-        $next.removeAttr('disabled');
-      } else if (skip + limit >= count) {
-        $prev.removeAttr('disabled');
-        $next.attr('disabled', 'disabled');
-      }
-    }
-  });
-
   var Blog = Backbone.View.extend({
     el: $('body'),
 
@@ -269,36 +263,53 @@
     initialize: function () {
       _(this).bindAll();
 
+      this.nav = this.$('#nav');
       this.posts = this.$('#posts');
-      this.pagination = new PaginationView({ collection: this.collection });
 
-      this.listenTo(this.collection, 'sync remove', this.render);
-      
-      // var options = {
-      //   data: { limit: this.collection.limit, skip: this.collection.skip }
-      // };
+      this.navListModel = new NavListModel();
 
-      this.collection.fetch();
+      this.listenTo(this.collection, 'reset', this.render);
+      this.listenTo(this.collection, 'add remove', this.showNav);
+      this.listenTo(this.collection, 'change', this.showPost);
+      this.listenTo(this.navListModel, 'change:activeIndex', this.showPost);
+
+      this.collection.fetch({ add: false, reset: true });
     },
 
-    addPost: function (post) {
-      var view = new PostView({ model: post });
-      this.posts.append(view.render().el);
+    showNav: function () {
+      this.navListView = new NavListView({
+        model: this.navListModel,
+        collection: this.collection
+      });
+
+      this.nav
+        .hide()
+        .find('.nav').remove()
+        .end()
+        .prepend(this.navListView.render().el)
+        .fadeIn();
     },
 
-    addAllPosts: function () {
-      this.collection.each(this.addPost, this);
+    showPost: function () {
+      var post = this.collection.at(this.navListModel.get('activeIndex'));
+
+      this.postView = new PostView({ model: post });
+
+      this.posts
+        .hide()
+        .empty()
+        .append(this.postView.render().el)
+        .fadeIn();
     },
 
     render: function () {
-      this.posts.empty();
-      this.addAllPosts();
-      
-      this.posts
-        .hide()
-        .fadeIn();
+      if (this.collection.size() > 0) {
+        this.showNav();
 
-      // this.posts.after(this.pagination.render().el);
+        if (this.navListModel.get('activeIndex') < 0) {
+          this.navListModel.set({ activeIndex: 0 });
+        }
+      }
 
       return this;
     },

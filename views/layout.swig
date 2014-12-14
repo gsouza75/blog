@@ -15,7 +15,7 @@
 </head>
 <body>
   <div class="container-fluid">
-    <header id="header" class="row clearfix">
+    <header id="header" class="row clearfix page-header">
       <h1 id="blog-name" class="col-sm-12">Good Stuff</h1>
     </header>
 
