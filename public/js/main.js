@@ -59,8 +59,6 @@
       return this;
     },
 
-    remove: function () {},
-
     handleEdit: function (e) {
       e.preventDefault();
 
@@ -147,6 +145,22 @@
     render: function () {
       this.$el.append(this.template(this.model.toJSON()));
       return this;
+    }
+  });
+
+  var MainView = Backbone.View.extend({
+    initialize: function () {
+      this.listenToOnce(this.model, 'sync', this.render);
+    },
+
+    render: function () {
+      var view = new PostView({ model: this.model });
+
+      this.$el
+        .hide()
+        .empty()
+        .append(view.render().el)
+        .fadeIn();
     }
   });
 
@@ -255,7 +269,7 @@
     el: $('#content'),
 
     events: {
-      'click #add-post': 'handleAdd'
+      'click #add-post': 'handleAddBtn'
     },
 
     initialize: function () {
@@ -266,8 +280,7 @@
 
       this.navListModel = new NavListModel();
 
-      this.listenTo(this.collection, 'reset', this.render);
-      this.listenTo(this.collection, 'add remove', this.showNav);
+      this.listenTo(this.collection, 'reset add remove', this.render);
       this.listenTo(this.collection, 'change', this.showMain);
       this.listenTo(this.navListModel, 'change:activeIndex', this.showMain);
 
@@ -286,46 +299,33 @@
         .end()
         .prepend(this.navListView.render().el)
         .fadeIn();
-
-      this.navListModel.set({ activeIndex: 0 });
-
-      // Manually trigger change in case the active index is already 0
-      // since we still need to show the first post.
-      if (this.navListModel.get('activeIndex') === 0) {
-        this.collection.trigger('change');
-      }
     },
 
     showMain: function () {
-      var self = this;
       var post = this.collection.at(this.navListModel.get('activeIndex'));
-
-      post.fetch({
-        success: function (post) {
-          self.postView = new PostView({ model: post });
-
-          self.main
-            .hide()
-            .empty()
-            .append(self.postView.render().el)
-            .fadeIn();
-        },
-
-        fail:function () {
-          // TODO: Implement.
-        }
-      });
+      new MainView({ model: post, el: this.main });
+      post.fetch();
     },
 
     render: function () {
       if (this.collection.size() > 0) {
         this.showNav();
+
+        if (this.navListModel.get('activeIndex') === 0) {
+          // Trigger change manually since we still want
+          // to display the first post.
+          this.collection.trigger('change');
+        } else {
+          // Otherwise set activeIndex, which will
+          // trigger the change event.
+          this.navListModel.set({ activeIndex: 0 });
+        }
       }
 
       return this;
     },
 
-    handleAdd: function () {
+    handleAddBtn: function () {
       var dlgModel = new ModalDlgModel({
           title: 'Add new post',
           okText: 'Add'
