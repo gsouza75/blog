@@ -231,7 +231,7 @@
         body: this.$el.find('#body').val()
       };
 
-      this.contentModel.save(attrs, { wait: true })
+      this.contentModel.save(attrs, { wait: true, type: 'post' })
         .done(this.destroy)
         .fail(this.displayError);
     },
