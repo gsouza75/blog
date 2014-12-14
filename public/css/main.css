@@ -27,6 +27,12 @@ ul {
   padding: 1em;
 }
 
+.nav-content {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
 #blog-name, #add-post {
   float: left;
 }
