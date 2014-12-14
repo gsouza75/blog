@@ -35,13 +35,10 @@ ul {
   overflow: auto;
 }
 
-#blog-name, #add-post {
-  float: left;
-}
-
 #blog-name {
   line-height: 70px;
   margin: 0;
+  text-align: center;
 }
 
 #add-post {
