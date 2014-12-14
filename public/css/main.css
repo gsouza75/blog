@@ -12,8 +12,6 @@ ul {
   background: #fafafa;
   margin: 0 -15px;
   padding-bottom: 0;
-  /*background: #eee;
-  height: 70px;*/
 }
 
 .title {
@@ -28,22 +26,6 @@ ul {
 #nav {
   padding: 1em;
 }
-
-/*.nav-content li {
-  border-bottom: 1px solid #eee;
-}
-
-.nav-link {
-  color: #666;
-  display: block;
-  padding: 20px 32px;
-  text-decoration: none;
-}
-
-.nav-link:hover {
-  background: #fafafa;
-  text-decoration: none;
-}*/
 
 #blog-name, #add-post {
   float: left;
