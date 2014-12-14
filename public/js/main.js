@@ -252,7 +252,7 @@
   });
 
   var Blog = Backbone.View.extend({
-    el: $('body'),
+    el: $('#content'),
 
     events: {
       'click #add-post': 'handleAdd'
