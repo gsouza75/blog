@@ -53,7 +53,7 @@
 
     attributes: function () {
       return {
-        'data-id': this.model.get('_id'),
+        'data-id': this.model.get('id'),
         'class': 'post'
       };
     },
@@ -105,7 +105,7 @@
 
     attributes: function () {
       return {
-        'data-id': this.model.get('_id'),
+        'data-id': this.model.get('id'),
         'class': 'nav-content nav nav-pills nav-stacked'
       };
     },
