@@ -143,6 +143,40 @@
     }
   });
 
+  var NavView = Backbone.View.extend({
+    initialize: function () {
+      this.render();
+    },
+
+    render: function () {
+      var listView = new NavListView({
+        model: this.model,
+        collection: this.collection
+      });
+
+      this.$el
+        .hide()
+        .find('.nav-content').remove()
+        .end()
+        .prepend(listView.render().el)
+        .fadeIn();
+
+      this.update();
+    },
+
+    update: function () {
+      if (this.model.get('activeIndex') === 0) {
+        // Trigger change manually since we still want
+        // to display the first post.
+        this.collection.trigger('change');
+      } else {
+        // Otherwise set activeIndex, which will
+        // trigger the change event.
+        this.model.set({ activeIndex: 0 });
+      }
+    }
+  });
+
   var EmptyView = Backbone.View.extend({
     tagName: 'em',
 
@@ -310,17 +344,22 @@
     },
 
     showNav: function () {
-      this.navListView = new NavListView({
+      new NavView({
+        el: this.nav,
         model: this.navListModel,
         collection: this.collection
       });
+      // this.navListView = new NavListView({
+      //   model: this.navListModel,
+      //   collection: this.collection
+      // });
 
-      this.nav
-        .hide()
-        .find('.nav-content').remove()
-        .end()
-        .prepend(this.navListView.render().el)
-        .fadeIn();
+      // this.nav
+      //   .hide()
+      //   .find('.nav-content').remove()
+      //   .end()
+      //   .prepend(this.navListView.render().el)
+      //   .fadeIn();
     },
 
     showMain: function () {
@@ -331,15 +370,15 @@
     render: function () {
       this.showNav();
 
-      if (this.navListModel.get('activeIndex') === 0) {
-        // Trigger change manually since we still want
-        // to display the first post.
-        this.collection.trigger('change');
-      } else {
-        // Otherwise set activeIndex, which will
-        // trigger the change event.
-        this.navListModel.set({ activeIndex: 0 });
-      }
+      // if (this.navListModel.get('activeIndex') === 0) {
+      //   // Trigger change manually since we still want
+      //   // to display the first post.
+      //   this.collection.trigger('change');
+      // } else {
+      //   // Otherwise set activeIndex, which will
+      //   // trigger the change event.
+      //   this.navListModel.set({ activeIndex: 0 });
+      // }
 
       return this;
     },
