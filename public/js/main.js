@@ -3,10 +3,7 @@
 
   var PostModel = Backbone.Model.extend({
     defaults: function () {
-      return {
-        title: '',
-        text: ''
-      };
+      return { title: '', text: '' };
     },
 
     urlRoot: '/Blog/api'
