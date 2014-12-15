@@ -216,14 +216,28 @@
 
   var MainView = Backbone.View.extend({
     initialize: function () {
-      this.listenTo(this.model, 'change:post', this.render);
+      this.listenTo(this.model, 'change:post', this.update);
+    },
+
+    update: function () {
+      var previousPost = this.model.previous('post');
+      var post = this.model.get('post');
+
+      if (previousPost) {
+        this.stopListening(previousPost);
+      }
+
+      if (post) {
+        this.listenTo(post, 'sync', this.render);
+        post.fetch();
+      } else {
+        this.render();
+      }
     },
 
     render: function () {
       var post = this.model.get('post');
-      var view = post ?
-        new PostView({ model: post }) :
-        new EmptyView();
+      var view = post ? new PostView({ model: post }) : new EmptyView();
 
       this.$el
         .hide()
@@ -379,10 +393,7 @@
 
     showMain: function () {
       var post = this.collection.at(this.navListModel.get('activeIndex'));
-      this.mainModel
-        .set({ post: post }, { silent: true })
-        .trigger('change:post');
-
+      this.mainModel.set({ post: post });
     },
 
     render: function () {
