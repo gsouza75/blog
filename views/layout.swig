@@ -16,7 +16,7 @@
 <body>
   <div class="container-fluid">
     <header id="header" class="row clearfix page-header">
-      <h1 id="blog-name" class="col-sm-12">Good Stuff</h1>
+      <h1 id="blog-name" class="col-sm-12">My Blog Editor</h1>
     </header>
 
     {% block content %}Default content{% endblock %}
