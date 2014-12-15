@@ -36,6 +36,14 @@ ul {
   overflow: auto;
 }
 
+.nav-content:empty {
+  display: none;
+}
+
+.nav-content:empty + #add-post {
+  margin: 0 auto;
+}
+
 .nav-link {
   max-width: 100%;
   overflow: hidden;
@@ -58,6 +66,10 @@ ul {
   float: none;
   margin: 22px auto;
   width: 100%;
+}
+
+#add-post:first-child {
+  display: none;
 }
 
 #main {
