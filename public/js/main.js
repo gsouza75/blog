@@ -3,7 +3,10 @@
 
   var PostModel = Backbone.Model.extend({
     defaults: function () {
-      return { title: '', text: '' };
+      return {
+        title: '',
+        text: ''
+      };
     },
 
     urlRoot: '/Blog/api'
@@ -19,6 +22,12 @@
   var NavListModel = Backbone.Model.extend({
     defaults: {
       activeIndex: -1
+    }
+  });
+
+  var MainModel = Backbone.Model.extend({
+    defaults: {
+      post: null
     }
   });
 
@@ -207,17 +216,45 @@
 
   var MainView = Backbone.View.extend({
     initialize: function () {
-      if (this.model) {
-        this.listenToOnce(this.model, 'sync', this.render);
-        this.model.fetch();
+      // this.post = this.model.get('post');
+      this.listenTo(this.model, 'change:post', this.update);
+
+      // if (this.model.get('post')) {
+      //   this.listenTo(this.model.get('post'), 'sync', this.render);
+      //   this.post.fetch();
+      // }
+
+      // if (this.model) {
+      //   this.listenToOnce(this.model, 'sync', this.render);
+      //   this.model.fetch();
+      // } else {
+      //   this.render();
+      // }
+    },
+
+    update: function () {
+      var post = this.model.get('post');
+
+      if (post) {
+        this.listenTo(post, 'sync', this.render);
+        post.fetch();
       } else {
         this.render();
       }
     },
 
+    removeEvents: function () {
+      var post = this.model.get('post');
+
+      if (post) {
+        this.stopListening(post);
+      }
+    },
+
     render: function () {
-      var view = this.model ?
-        new PostView({ model: this.model }) :
+      var post = this.model.get('post');
+      var view = post ?
+        new PostView({ model: post }) :
         new EmptyView();
 
       this.$el
@@ -346,11 +383,17 @@
       this.$main = this.$('#main');
 
       this.navListModel = new NavListModel();
-      
+      this.mainModel = new MainModel();
+
       this.navView = new NavView({
         el: this.$nav,
         model: this.navListModel,
         collection: this.collection
+      });
+
+      this.mainView = new MainView({
+        model: this.mainModel,
+        el: this.$main
       });
 
       this.listenTo(this.collection, 'reset add remove', this.render);
@@ -366,7 +409,9 @@
 
     showMain: function () {
       var post = this.collection.at(this.navListModel.get('activeIndex'));
-      new MainView({ model: post, el: this.$main });
+      this.mainView.removeEvents();
+      this.mainModel.set({ post: post });
+      // new MainView({ model: post, el: this.$main });
     },
 
     render: function () {
