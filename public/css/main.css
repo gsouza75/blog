@@ -36,6 +36,13 @@ ul {
   overflow: auto;
 }
 
+.nav-link {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .nav-stacked > li+li {
   margin-top: 4px;
 }
