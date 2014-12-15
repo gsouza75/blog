@@ -347,6 +347,8 @@
     el: $('#content'),
 
     initialize: function () {
+      this.collection = new PostCollection();
+
       this.$nav = this.$('#nav');
       this.$main = this.$('#main');
 
@@ -389,7 +391,7 @@
     },
   });
 
-  var postCollection = new PostCollection();
-  new Blog({ collection: postCollection });
+  // Start the app.
+  new Blog();
 
 }).call(this);
