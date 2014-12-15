@@ -32,8 +32,12 @@ ul {
   border: 1px solid #eee;
   border-radius: 4px;
   max-height: 546px;
-  min-height: 240px;
+  padding: 4px;
   overflow: auto;
+}
+
+.nav-stacked > li+li {
+  margin-top: 4px;
 }
 
 #blog-name {
