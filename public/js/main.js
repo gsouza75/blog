@@ -216,39 +216,7 @@
 
   var MainView = Backbone.View.extend({
     initialize: function () {
-      // this.post = this.model.get('post');
-      this.listenTo(this.model, 'change:post', this.update);
-
-      // if (this.model.get('post')) {
-      //   this.listenTo(this.model.get('post'), 'sync', this.render);
-      //   this.post.fetch();
-      // }
-
-      // if (this.model) {
-      //   this.listenToOnce(this.model, 'sync', this.render);
-      //   this.model.fetch();
-      // } else {
-      //   this.render();
-      // }
-    },
-
-    update: function () {
-      var post = this.model.get('post');
-
-      if (post) {
-        this.listenTo(post, 'sync', this.render);
-        post.fetch();
-      } else {
-        this.render();
-      }
-    },
-
-    removeEvents: function () {
-      var post = this.model.get('post');
-
-      if (post) {
-        this.stopListening(post);
-      }
+      this.listenTo(this.model, 'change:post', this.render);
     },
 
     render: function () {
@@ -409,9 +377,10 @@
 
     showMain: function () {
       var post = this.collection.at(this.navListModel.get('activeIndex'));
-      this.mainView.removeEvents();
-      this.mainModel.set({ post: post });
-      // new MainView({ model: post, el: this.$main });
+      this.mainModel
+        .set({ post: post }, { silent: true })
+        .trigger('change:post');
+
     },
 
     render: function () {
