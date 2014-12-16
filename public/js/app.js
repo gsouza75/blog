@@ -221,15 +221,15 @@
 
     update: function () {
       var previousPost = this.model.previous('post');
-      var post = this.model.get('post');
+      var currentPost = this.model.get('post');
 
       if (previousPost) {
         this.stopListening(previousPost);
       }
 
-      if (post) {
-        this.listenTo(post, 'sync', this.render);
-        post.fetch();
+      if (currentPost) {
+        this.listenTo(currentPost, 'sync', this.render);
+        currentPost.fetch();
       } else {
         this.render();
       }
