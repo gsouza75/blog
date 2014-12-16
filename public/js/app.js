@@ -363,21 +363,18 @@
     initialize: function () {
       this.collection = new PostCollection();
 
-      this.$nav = this.$('#nav');
-      this.$main = this.$('#main');
-
       this.navListModel = new NavListModel();
       this.mainModel = new MainModel();
 
       this.navView = new NavView({
-        el: this.$nav,
+        el: this.$('#nav'),
         model: this.navListModel,
         collection: this.collection
       });
 
       this.mainView = new MainView({
         model: this.mainModel,
-        el: this.$main
+        el: this.$('#main')
       });
 
       this.listenTo(this.collection, 'reset add remove', this.render);
