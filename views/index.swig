@@ -44,7 +44,9 @@
     <div class="form-group">
       <label for="text">Text</label>
       <textarea class="form-control" id="text" name="text" rows="8" placeholder="Enter text..." required
-        data-bv-notempty-message="The text is required and cannot be empty"><%= text %></textarea>
+        data-bv-notempty-message="The text is required and cannot be empty"
+        data-bv-callback="true" data-bv-callback-message="Server error"
+        data-bv-callback-callback=""><%= text %></textarea>
     </div>
   </script>
 

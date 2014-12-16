@@ -278,7 +278,7 @@
     },
 
     onLoaded: function () {
-      this.$el.find('#post-form')
+      this.$('#post-form')
         .bootstrapValidator()
         .on('success.form.bv', this.handleSubmit)
         .find('input').eq(0).focus();
@@ -295,17 +295,12 @@
 
     displayError: function (model, res) {
       var err = res.responseJSON;
+      var validator = this.$('#post-form').data('bootstrapValidator');
 
-      // TODO: Doesn't the plugin's API have an interface for this?
-      this.$('form .form-group')
-        .addClass('has-error')
-        .removeClass('has-success')
-        .find('.form-control-feedback')
-          .addClass('glyphicon-remove')
-          .removeClass('glyphicon-ok')
-          .end()
-        .filter(':last-child')
-        .find('small').text(err.message).show();
+      validator
+        .updateStatus('text', 'INVALID', 'callback')
+        .updateStatus('title', 'INVALID', 'callback')
+         .updateMessage('text', 'callback', err.message);
     }
   });
 
