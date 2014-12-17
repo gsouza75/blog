@@ -2,11 +2,9 @@
   'use strict';
 
   var PostModel = Backbone.Model.extend({
-    defaults: function () {
-      return {
-        title: '',
-        text: ''
-      };
+    defaults: {
+      title: '',
+      text: ''
     },
 
     urlRoot: '/Blog/api'
