@@ -11,7 +11,7 @@
   <script type="text/template" id="modal-template">
     <div class="modal-dialog">
       <div class="modal-content">
-        <form id="post-form" action="/posts" method="post" role="form"
+        <form id="post-form" action="/Blog/api" method="post" role="form"
           data-bv-message="This value is not valid"
           data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
           data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
@@ -33,6 +33,11 @@
 
   <script type="text/template" id="delete-template">
     <p>Are you sure you want to delete <em><%= title %></em>?</p>
+    <div class="form-group">
+      <div class="server-error">
+        <small class="help-block"></small>
+      </div>
+    </div>
   </script>
 
   <script type="text/template" id="form-template">

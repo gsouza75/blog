@@ -60,11 +60,13 @@ router.put('/Blog/api/:id', function (req, res) {
 });
 
 router.post('/Blog/api/:id', function (req, res) {
+  // return res.status(400).json({ message: 'Invalid something....' });
   delete req.body._id;
   Post.findByIdAndUpdate(req.params.id, req.body, handleResponse(res));
 });
 
 router.delete('/Blog/api/:id', function (req, res) {
+  // return res.status(400).json({ message: 'Invalid something....' });
   Post.findByIdAndRemove(req.params.id, handleResponse(res));
 });
 

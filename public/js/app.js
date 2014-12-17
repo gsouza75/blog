@@ -293,14 +293,15 @@
       this.$el.modal('hide');
     },
 
-    displayError: function (model, res) {
-      var err = res.responseJSON;
-      var validator = this.$('#post-form').data('bootstrapValidator');
+    handleError: function (res) {
+      this.displayError(res.responseJSON.message);
+    },
 
-      validator
+    displayError: function (message) {
+      this.$('#post-form').data('bootstrapValidator')
         .updateStatus('text', 'INVALID', 'callback')
         .updateStatus('title', 'INVALID', 'callback')
-         .updateMessage('text', 'callback', err.message);
+        .updateMessage('text', 'callback', message);
     }
   });
 
@@ -316,8 +317,12 @@
       }, {
         wait: true,
         success: this.destroy,
-        error: this.displayError
+        error: this.handleError
       });
+    },
+
+    handleError: function (model, res) {
+      this.displayError(res.responseJSON.message);
     }
   });
 
@@ -335,7 +340,7 @@
       this.contentModel
         .save(attrs, { wait: true, type: 'post' })
         .done(this.destroy)
-        .fail(this.displayError);
+        .fail(this.handleError);
     },
   });
 
@@ -348,7 +353,17 @@
       this.contentModel
         .destroy({ wait: true })
         .done(this.destroy)
-        .fail(this.displayError);
+        .fail(this.handleError);
+    },
+
+    displayError: function (message) {
+      this.$('.form-group')
+        .addClass('has-error')
+        .find('.help-block')
+        .text(message)
+        .closest('form')
+        .find('.btn-primary')
+        .removeAttr('disabled');
     }
   });
 
