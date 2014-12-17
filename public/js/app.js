@@ -310,8 +310,8 @@
       e.preventDefault();
 
       this.collection.create({
-        title: this.$el.find('#title').val(),
-        text: this.$el.find('#text').val()
+        title: this.$('#title').val(),
+        text: this.$('#text').val()
       }, {
         wait: true,
         success: this.destroy,
@@ -331,8 +331,8 @@
       e.preventDefault();
 
       var attrs = {
-        title: this.$el.find('#title').val(),
-        text: this.$el.find('#text').val()
+        title: this.$('#title').val(),
+        text: this.$('#text').val()
       };
 
       this.contentModel
@@ -381,8 +381,8 @@
       });
 
       this.mainView = new MainView({
-        model: this.mainModel,
-        el: this.$('#main')
+        el: this.$('#main'),
+        model: this.mainModel
       });
 
       this.listenTo(this.collection, 'reset add remove', this.render);
