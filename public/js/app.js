@@ -355,8 +355,8 @@
 
       this.mainView = new MainView({ el: this.$('#main') });
 
-      this.listenTo(this.collection, 'reset remove', this.render);
       this.listenTo(this.collection, 'add', this.addPost);
+      this.listenTo(this.collection, 'reset remove', this.render);
       this.listenTo(this.navListModel, 'change:activeIndex', this.showMain);
 
       this.collection.fetch({ add: false, reset: true });
