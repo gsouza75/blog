@@ -391,4 +391,4 @@
   // Start the app.
   new Blog();
 
-}).call(this);
+})();
