@@ -23,12 +23,6 @@
     }
   });
 
-  var MainModel = Backbone.Model.extend({
-    defaults: {
-      post: null
-    }
-  });
-
   var PostCollection = Backbone.Collection.extend({
     model: PostModel,
 
@@ -199,29 +193,10 @@
   });
 
   var MainView = Backbone.View.extend({
-    initialize: function () {
-      this.listenTo(this.model, 'change:post', this.update);
-    },
-
-    update: function () {
-      var previousPost = this.model.previous('post');
-      var currentPost = this.model.get('post');
-
-      if (previousPost) {
-        this.stopListening(previousPost);
-      }
-
-      if (currentPost) {
-        this.listenTo(currentPost, 'sync', this.render);
-        currentPost.fetch();
-      } else {
-        this.render();
-      }
-    },
-
     render: function () {
-      var post = this.model.get('post');
-      var view = post ? new PostView({ model: post }) : new EmptyView();
+      var view = this.model ?
+        new PostView({ model: this.model }) :
+        new EmptyView();
 
       this.$el
         .hide()
@@ -230,6 +205,18 @@
         .fadeIn();
 
       return this;
+    },
+
+    update: function (fetch) {
+      if (this.model) {
+        this.stopListening();
+        this.listenTo(this.model, 'sync', this.render);
+        if (fetch) {
+          this.model.fetch();
+        }
+      } else {
+        this.render();
+      }
     }
   });
 
@@ -355,10 +342,10 @@
     el: $('#content'),
 
     initialize: function () {
-      this.collection = new PostCollection();
+      this.added = false;
 
+      this.collection = new PostCollection();
       this.navListModel = new NavListModel();
-      this.mainModel = new MainModel();
 
       this.navView = new NavView({
         el: this.$('#nav'),
@@ -366,32 +353,37 @@
         collection: this.collection
       });
 
-      this.mainView = new MainView({
-        el: this.$('#main'),
-        model: this.mainModel
-      });
+      this.mainView = new MainView({ el: this.$('#main') });
 
-      this.listenTo(this.collection, 'reset add remove', this.render);
-      this.listenTo(this.collection, 'change', this.showMain);
+      this.listenTo(this.collection, 'reset remove', this.render);
+      this.listenTo(this.collection, 'add', this.addPost);
       this.listenTo(this.navListModel, 'change:activeIndex', this.showMain);
 
       this.collection.fetch({ add: false, reset: true });
     },
 
-    showNav: function () {
+    showMain: function () {
+      var view = this.mainView;
+      var index = this.navListModel.get('activeIndex');
+      var post = this.collection.at(index);
+      
+      view.model = post;
+      view.update(!this.added);
+
+      this.added = false;
+    },
+
+    addPost: function () {
+      this.added = true;
+      this.render();
+    },
+
+    render: function () {
       this.navView.render();
       this.navListModel
         .set({ activeIndex: 0 }, { silent: true })
         .trigger('change:activeIndex');
-    },
 
-    showMain: function () {
-      var post = this.collection.at(this.navListModel.get('activeIndex'));
-      this.mainModel.set({ post: post });
-    },
-
-    render: function () {
-      this.showNav();
       return this;
     },
   });
