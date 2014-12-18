@@ -208,8 +208,9 @@
     },
 
     update: function (fetch) {
+      this.stopListening();
+      
       if (this.model) {
-        this.stopListening();
         this.listenTo(this.model, 'sync', this.render);
         if (fetch) {
           this.model.fetch();
