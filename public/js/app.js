@@ -167,20 +167,6 @@
         .end()
         .prepend(listView.render().el)
         .fadeIn();
-
-      this.update();
-    },
-
-    update: function () {
-      if (this.model.get('activeIndex') === 0) {
-        // Trigger change manually since we still want
-        // to display the first post.
-        this.collection.trigger('change');
-      } else {
-        // Otherwise set activeIndex, which will
-        // trigger the change event.
-        this.model.set({ activeIndex: 0 });
-      }
     },
 
     handleAddBtn: function () {
@@ -394,6 +380,9 @@
 
     showNav: function () {
       this.navView.render();
+      this.navListModel
+        .set({ activeIndex: 0 }, { silent: true })
+        .trigger('change:activeIndex');
     },
 
     showMain: function () {
